@@ -1,0 +1,30 @@
+SELECT
+  a.id_alumno,
+  a.nombre_completo,
+  a.rut,
+  mc.id_macrociclo,
+  mc.nombre_macro,
+  meso.id_mesociclo,
+  meso.fase_tipo,
+  b.id_bloque,
+  b.semana_meso,
+  b.dia_numero,
+  b.dia_tipo,
+  b.orden,
+  COALESCE(e.nombre, 'Ejercicio #' || b.id_ejercicio::text) AS ejercicio,
+  b.objetivo_muscular,
+  b.series,
+  b.reps_min || ' - ' || b.reps_max AS repeticiones,
+  b.rir_objetivo,
+  b.peso_sugerido_inicial AS peso_kg,
+  b.tempo,
+  b.descanso_seg
+FROM adt.alumnos a
+JOIN adt.macrociclos mc ON mc.id_alumno = a.id_alumno
+JOIN adt.mesociclos meso ON meso.id_macrociclo = mc.id_macrociclo
+JOIN adt.bloques_ejercicios b ON b.id_mesociclo = meso.id_mesociclo
+LEFT JOIN adt.ejercicios e ON e.id_ejercicio = b.id_ejercicio
+WHERE a.id_alumno = {{sel_routine_student.selectedOptionValue || 0}}
+  AND mc.esta_activo = TRUE
+  AND meso.esta_activo = TRUE
+ORDER BY b.semana_meso, b.dia_numero, b.orden;

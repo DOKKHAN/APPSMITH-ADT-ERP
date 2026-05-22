@@ -1,0 +1,64 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "k236a4efdaf",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Buscar alumno por nombre o RUT",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "onDropdownOpen": "{{get_students_lookup.run().then(() => storeValue('rutinas_student_options', get_students_lookup.data || [])).catch((error) => showAlert('Error cargando alumnos: '+ error.message, 'error'));}}",
+  "onOptionChange": "{{sel_routine_student.selectedOptionValue && sel_routine_student.selectedOptionValue !== '__empty__' ? get_student_routine.run() : null;}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Buscar por nombre o RUT",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "serverSideFiltering": false,
+  "sourceData": "{{(() => { const rows = (get_students_lookup.data && get_students_lookup.data.length ? get_students_lookup.data : appsmith.store.rutinas_student_options) || []; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin datos cargados', value: '__empty__' }]; })()}}",
+  "topRow": 13,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w18bdc9354b",
+  "widgetName": "sel_routine_student"
+}

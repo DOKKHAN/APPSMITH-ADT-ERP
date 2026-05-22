@@ -1,0 +1,5 @@
+{
+  "id_alumno": {{sel_alumno_routine.selectedOptionValue}},
+  "nombre": "{{sel_alumno_routine.selectedOptionLabel}}",
+  "ejecutado_por": "Appsmith_Admin"
+}

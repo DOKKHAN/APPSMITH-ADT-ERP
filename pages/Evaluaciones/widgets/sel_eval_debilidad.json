@@ -1,0 +1,51 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "k_eval_debilidad",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Debilidad",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Seleccionar",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 15,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"ninguna\",\n    \"value\": \"ninguna\"\n  },\n  {\n    \"label\": \"gluteo\",\n    \"value\": \"gluteo\"\n  },\n  {\n    \"label\": \"abdomen\",\n    \"value\": \"abdomen\"\n  },\n  {\n    \"label\": \"manguito_rotador\",\n    \"value\": \"manguito_rotador\"\n  }\n]",
+  "topRow": 29,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w_eval_debilidad",
+  "widgetName": "sel_eval_debilidad"
+}

@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 72,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ka19b274fd4",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Ejercicio",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 8,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "onDropdownOpen": "{{get_exercises_lookup.run().then(() => storeValue('evaluaciones_exercise_options', get_exercises_lookup.data || [])).catch((error) => showAlert('Error cargando ejercicios: '+ error.message, 'error'));}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 71,
+  "originalTopRow": 64,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Seleccionar",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 30,
+  "serverSideFiltering": false,
+  "sourceData": "{{(() => { const rows = (get_exercises_lookup.data && get_exercises_lookup.data.length ? get_exercises_lookup.data : (appsmith.store.evaluaciones_exercise_options || [])); if (!rows.length && appsmith.store.evaluaciones_loading) return [{ label: 'Cargando ejercicios...', value: '__loading__' }]; return rows.length ? rows.map((e) => ({ label: e.label || e.nombre || ('Ejercicio #' + (e.value || e.id_ejercicio)), value: e.value || e.id_ejercicio })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}",
+  "topRow": 65,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w1d1de436f0",
+  "widgetName": "sel_eval_exercise_3"
+}

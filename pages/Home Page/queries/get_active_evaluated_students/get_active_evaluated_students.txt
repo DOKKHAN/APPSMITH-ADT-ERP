@@ -1,0 +1,7 @@
+SELECT 
+    id_alumno as value, 
+    nombre_completo as label 
+FROM adt.alumnos 
+WHERE estado_activo = TRUE 
+AND evaluacion_inicial = TRUE
+ORDER BY nombre_completo ASC;

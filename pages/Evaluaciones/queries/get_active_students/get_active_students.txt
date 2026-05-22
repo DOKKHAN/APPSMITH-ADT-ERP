@@ -1,0 +1,4 @@
+SELECT *
+FROM adt.alumnos
+WHERE estado_activo = TRUE
+ORDER BY nombre_completo ASC;

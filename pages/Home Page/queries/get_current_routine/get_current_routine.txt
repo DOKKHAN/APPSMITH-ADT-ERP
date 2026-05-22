@@ -1,0 +1,14 @@
+SELECT 
+    rm.nombre_plan, 
+    rm.id_rutina,
+    rm.fecha_inicio,
+    m.id_macrociclo,
+    meso.id_mesociclo,
+    meso.fase_tipo
+FROM adt.rutinas_maestras rm
+JOIN adt.macrociclos m ON rm.id_macrociclo = m.id_macrociclo
+JOIN adt.mesociclos meso ON m.id_macrociclo = meso.id_macrociclo
+WHERE rm.id_alumno = {{sel_alumno_evaluado.selectedOptionValue || 0}}
+AND rm.esta_activa = TRUE
+AND meso.esta_activo = TRUE
+LIMIT 1;

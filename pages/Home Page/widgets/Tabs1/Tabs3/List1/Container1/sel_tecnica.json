@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 44,
+  "boxShadow": "none",
+  "defaultOptionValue": "1",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "yertnolbjy",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Técnica",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 7.189453125,
+  "parentId": "alylmbok0l",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  { \"label\": \"5 - Excelente (Sin fallos)\", \"value\": 5 },\n  { \"label\": \"4 - Muy Buena (Detalles mínimos)\", \"value\": 4 },\n  { \"label\": \"3 - Buena (Forma aceptable)\", \"value\": 3 },\n  { \"label\": \"2 - Regular (Requiere corrección)\", \"value\": 2 },\n  { \"label\": \"1 - Deficiente (Riesgo de lesión)\", \"value\": 1 }\n]",
+  "topRow": 37,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "p32dfrtbk6",
+  "widgetName": "sel_tecnica"
+}

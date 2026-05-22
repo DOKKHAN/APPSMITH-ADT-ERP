@@ -1,0 +1,4 @@
+INSERT INTO adt.evaluaciones_movimiento
+(id_sesion, id_ejercicio, punto_evaluado, peso_manejado, reps_logradas, rpe_observado, tecnica_calificacion)
+VALUES
+{{HomeV2.evaluationRows(this.params.id_sesion).map((r) => `(${r.id_sesion}, ${r.id_ejercicio}, ${r.punto_evaluado}, ${r.peso_manejado}, ${r.reps_logradas}, ${r.rpe_observado}, ${r.tecnica_calificacion})`).join(',')}};

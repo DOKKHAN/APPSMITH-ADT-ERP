@@ -1,0 +1,12 @@
+UPDATE adt.alumnos
+SET
+    nombre_completo = {{tbl_alumnos.updatedRow.nombre_completo}},
+    rut = {{tbl_alumnos.updatedRow.rut}},
+    fecha_nacimiento = {{tbl_alumnos.updatedRow.fecha_nacimiento}},
+    genero = {{tbl_alumnos.updatedRow.genero}},
+    enfoque_especifico = {{tbl_alumnos.updatedRow.enfoque_especifico}},
+    frecuencia_semanal = {{tbl_alumnos.updatedRow.frecuencia_semanal}},
+    nivel_experiencia = {{tbl_alumnos.updatedRow.nivel_experiencia}},
+    estado_activo = {{tbl_alumnos.updatedRow.estado_activo}},
+    evaluacion_inicial = {{tbl_alumnos.updatedRow.evaluacion_inicial}}
+WHERE id_alumno = {{tbl_alumnos.updatedRow.id_alumno}};

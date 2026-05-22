@@ -1,0 +1,6 @@
+INSERT INTO adt.evaluaciones_sesion (id_alumno, fecha)
+VALUES (
+  {{ sel_alumno.selectedOptionValue }}, 
+  CURRENT_DATE
+)
+RETURNING id_sesion;

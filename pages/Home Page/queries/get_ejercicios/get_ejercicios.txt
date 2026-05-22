@@ -1,0 +1,1 @@
+SELECT id_ejercicio, nombre, grupo_muscular_primario FROM adt.ejercicios;

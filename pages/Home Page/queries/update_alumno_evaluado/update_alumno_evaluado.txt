@@ -1,0 +1,3 @@
+UPDATE adt.alumnos 
+SET evaluacion_inicial = TRUE 
+WHERE id_alumno = {{ sel_alumno.selectedOptionValue }};

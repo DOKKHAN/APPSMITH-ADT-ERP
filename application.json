@@ -1,0 +1,88 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#ECECEC",
+  "evaluationVersion": 2,
+  "icon": "server",
+  "pages": [
+    {
+      "id": "Home Page",
+      "isDefault": false
+    },
+    {
+      "id": "Home V2",
+      "isDefault": false
+    },
+    {
+      "id": "Login",
+      "isDefault": true
+    },
+    {
+      "id": "Alumnos",
+      "isDefault": false
+    },
+    {
+      "id": "Evaluaciones",
+      "isDefault": false
+    },
+    {
+      "id": "Rutinas",
+      "isDefault": false
+    },
+    {
+      "id": "Administrador",
+      "isDefault": false
+    }
+  ],
+  "staticUrlSettings": {
+    "enabled": true,
+    "uniqueSlug": "mizen"
+  },
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedApplicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  }
+}

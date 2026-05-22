@@ -1,0 +1,60 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "k847b54339c",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Buscar alumno sin evaluación inicial",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "onDropdownOpen": "{{Promise.all([get_pending_students_lookup.run(), get_pending_initial_evaluations.run()]).then(() => storeValue('evaluaciones_student_options', (get_pending_initial_evaluations.data && get_pending_initial_evaluations.data.length ? get_pending_initial_evaluations.data : get_pending_students_lookup.data) || [])).catch((error) => showAlert('Error cargando alumnos pendientes: '+ error.message, 'error'));}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Buscar por nombre o RUT",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "serverSideFiltering": false,
+  "sourceData": "{{(() => { const rows = (get_pending_students_lookup.data && get_pending_students_lookup.data.length ? get_pending_students_lookup.data : (appsmith.store.evaluaciones_student_options || get_pending_initial_evaluations.data || [])); if (!rows.length && appsmith.store.evaluaciones_loading) return [{ label: 'Cargando alumnos...', value: '__loading__' }]; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin alumnos cargados', value: '__empty__' }]; })()}}",
+  "topRow": 13,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w03d992a804",
+  "widgetName": "sel_eval_student"
+}

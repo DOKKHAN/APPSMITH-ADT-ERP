@@ -1,0 +1,28 @@
+SELECT 
+    -- CAMPOS DE IDENTIDAD (Ocultar en la tabla de Appsmith)
+    b.id_bloque,
+    b.id_mesociclo,
+    b.id_ejercicio,
+    
+    -- CAMPOS DE VISUALIZACIÓN
+    b.orden,
+    e.nombre as ejercicio,
+    e.grupo_muscular_primario as grupo,
+    b.series,
+    b.reps_min || ' - ' || b.reps_max as repeticiones,
+    b.peso_sugerido_inicial as peso_kg,
+    b.tempo,
+    b.descanso_seg as descanso,
+
+    -- COLUMNAS PARA EDICIÓN (Inyectamos NULL para habilitar el switch 'Editable')
+    NULL as rir,
+		NULL as reps_s1,
+    NULL as reps_s2,
+    NULL as reps_s3,
+    NULL as reps_s4,
+		NULL as rpe,
+    NULL as comentario_log
+FROM adt.bloques_ejercicios b
+JOIN adt.ejercicios e ON b.id_ejercicio = e.id_ejercicio
+WHERE b.id_mesociclo = {{get_current_routine.data?.[0]?.id_mesociclo || 0}}
+ORDER BY b.orden ASC;

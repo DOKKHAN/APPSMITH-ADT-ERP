@@ -1,0 +1,174 @@
+-- Creación del esquema
+CREATE SCHEMA IF NOT EXISTS adt;
+
+-- ==========================================
+-- MÓDULO 1: ALUMNOS Y SALUD
+-- ==========================================
+
+DROP TABLE IF EXISTS adt.alumnos CASCADE;
+CREATE TABLE adt.alumnos (
+    id_alumno SERIAL PRIMARY KEY,
+    nombre_completo VARCHAR(255) NOT NULL,
+    rut VARCHAR(20) UNIQUE,
+    fecha_nacimiento DATE,
+    genero VARCHAR(50),
+    objetivo_id INTEGER, 
+    enfoque_especifico VARCHAR(100),
+    frecuencia_semanal INTEGER,
+    nivel_experiencia VARCHAR(50),
+    fecha_ingreso DATE DEFAULT CURRENT_DATE,
+    estado_activo BOOLEAN DEFAULT TRUE,
+    -- CORRECCIÓN: Ahora nacen como FALSE para que aparezcan en tu lista de Appsmith
+    evaluacion_inicial BOOLEAN DEFAULT FALSE 
+);
+
+DROP TABLE IF EXISTS adt.evaluaciones_antropometricas CASCADE;
+CREATE TABLE adt.evaluaciones_antropometricas (
+    id_evaluacion SERIAL PRIMARY KEY,
+    id_alumno INTEGER REFERENCES adt.alumnos(id_alumno) ON DELETE CASCADE,
+    fecha DATE NOT NULL DEFAULT CURRENT_DATE,
+    peso_kg DECIMAL(5,2),
+    altura_cm INTEGER,
+    porcentaje_grasa DECIMAL(4,2),
+    porcentaje_musculo DECIMAL(4,2),
+    imc DECIMAL(4,2),
+    tmb INTEGER,
+    edad_fisica INTEGER,
+    grasa_visceral INTEGER
+);
+
+DROP TABLE IF EXISTS adt.antecedentes_salud CASCADE;
+CREATE TABLE adt.antecedentes_salud (
+    id_antecedente SERIAL PRIMARY KEY,
+    id_alumno INTEGER REFERENCES adt.alumnos(id_alumno) ON DELETE CASCADE,
+    parq_aprobado BOOLEAN DEFAULT FALSE,
+    hipertension BOOLEAN DEFAULT FALSE,
+    diabetes BOOLEAN DEFAULT FALSE,
+    tabaquismo BOOLEAN DEFAULT FALSE,
+    lesiones_previas TEXT,
+    medicamentos TEXT,
+    historial_deportivo TEXT,
+    experience_pesas TEXT,
+    observaciones_medicas TEXT
+);
+
+-- ==========================================
+-- MÓDULO 2: BIBLIOTECA Y RESTRICCIONES
+-- ==========================================
+
+DROP TABLE IF EXISTS adt.ejercicios CASCADE;
+CREATE TABLE adt.ejercicios (
+    id_ejercicio SERIAL PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    multi_mono VARCHAR(50),
+    patron_movimiento VARCHAR(100),
+    tren VARCHAR(50),
+    articulacion VARCHAR(100),
+    grupo_muscular_primario VARCHAR(100),
+    grupo_muscular_secundario VARCHAR(100),
+    grupo_muscular_terciario VARCHAR(100),
+    maquina VARCHAR(100),
+    equipo_necesario VARCHAR(100),
+    accesorio VARCHAR(100),
+    unilateral_bilateral VARCHAR(50),
+    dificultad VARCHAR(50)
+);
+
+-- CORRECCIÓN PARA n8n: Ampliados límites de caracteres
+DROP TABLE IF EXISTS adt.problemas_restricciones CASCADE;
+CREATE TABLE adt.problemas_restricciones (
+    id_problema VARCHAR(50) PRIMARY KEY,
+    nombre_problema VARCHAR(255) NOT NULL,
+    tipo_impacto VARCHAR(255),          -- Ampliado de 100 a 255
+    patron_a_evitar VARCHAR(255),       -- Ampliado de 100 a 255
+    articulacion_afectada VARCHAR(255), -- Ampliado de 100 a 255
+    instruccion_automatica TEXT,
+    comentario TEXT
+);
+
+DROP TABLE IF EXISTS adt.alumno_problemas CASCADE;
+CREATE TABLE adt.alumno_problemas (
+    id_relacion SERIAL PRIMARY KEY,
+    id_alumno INTEGER REFERENCES adt.alumnos(id_alumno) ON DELETE CASCADE,
+    id_problema VARCHAR(50) REFERENCES adt.problemas_restricciones(id_problema),
+    fecha_deteccion DATE DEFAULT CURRENT_DATE,
+    esta_activo BOOLEAN DEFAULT TRUE
+);
+
+-- ==========================================
+-- MÓDULO 3: EVALUACIÓN NORMALIZADA
+-- ==========================================
+
+DROP TABLE IF EXISTS adt.evaluaciones_sesion CASCADE;
+CREATE TABLE adt.evaluaciones_sesion (
+    id_sesion SERIAL PRIMARY KEY,
+    id_alumno INTEGER REFERENCES adt.alumnos(id_alumno) ON DELETE CASCADE,
+    fecha DATE DEFAULT CURRENT_DATE,
+    observaciones_generales TEXT
+);
+
+DROP TABLE IF EXISTS adt.evaluaciones_movimiento CASCADE;
+CREATE TABLE adt.evaluaciones_movimiento (
+    id_mov_eval SERIAL PRIMARY KEY,
+    id_sesion INTEGER REFERENCES adt.evaluaciones_sesion(id_sesion) ON DELETE CASCADE,
+    id_ejercicio INTEGER REFERENCES adt.ejercicios(id_ejercicio),
+    punto_evaluado VARCHAR(255),
+    peso_manejado DECIMAL(6,2),
+    reps_logradas INTEGER,
+    rpe_observado INTEGER,
+    tecnica_calificacion INTEGER,
+    observaciones_test TEXT
+);
+
+-- ==========================================
+-- MÓDULO 4: PROGRAMACIÓN Y EJECUCIÓN
+-- ==========================================
+
+DROP TABLE IF EXISTS adt.rutinas_maestras CASCADE;
+CREATE TABLE adt.rutinas_maestras (
+    id_rutina SERIAL PRIMARY KEY,
+    id_alumno INTEGER REFERENCES adt.alumnos(id_alumno) ON DELETE CASCADE,
+    nombre_plan VARCHAR(255),
+    fecha_inicio DATE,
+    fecha_fin_estimada DATE,
+    dias_semanales INTEGER,
+    objetivo_fase VARCHAR(100),
+    esta_activa BOOLEAN DEFAULT TRUE
+);
+
+DROP TABLE IF EXISTS adt.bloques_ejercicios CASCADE;
+CREATE TABLE adt.bloques_ejercicios (
+    id_bloque SERIAL PRIMARY KEY,
+    id_rutina INTEGER REFERENCES adt.rutinas_maestras(id_rutina) ON DELETE CASCADE,
+    id_ejercicio INTEGER REFERENCES adt.ejercicios(id_ejercicio),
+    dia_numero INTEGER,
+    orden INTEGER,
+    series INTEGER,
+    reps_min INTEGER,
+    reps_max INTEGER,
+    rir_objetivo INTEGER,
+    peso_sugerido DECIMAL(6,2),
+    descanso_seg INTEGER
+);
+
+DROP TABLE IF EXISTS adt.log_entrenamiento CASCADE;
+CREATE TABLE adt.log_entrenamiento (
+    id_log SERIAL PRIMARY KEY,
+    id_bloque INTEGER REFERENCES adt.bloques_ejercicios(id_bloque) ON DELETE CASCADE,
+    fecha_realizada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    series_completadas INTEGER,
+    reps_logradas VARCHAR(50), 
+    peso_utilizado DECIMAL(6,2),
+    rir_reportado INTEGER,
+    rpe_reportado INTEGER,
+    comentarios_alumno TEXT
+);
+
+DROP TABLE IF EXISTS adt.config_progresion CASCADE;
+CREATE TABLE adt.config_progresion (
+    regla_id VARCHAR(50) PRIMARY KEY,
+    parametro VARCHAR(255),
+    valor DECIMAL(10,2),
+    accion VARCHAR(255),      -- Ampliado para reglas complejas
+    incremento DECIMAL(10,2)
+);

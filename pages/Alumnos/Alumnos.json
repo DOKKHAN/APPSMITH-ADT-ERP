@@ -1,0 +1,34 @@
+{
+  "gitSyncId": "69b8602109cfa130e9690df8_17ae631c-7580-4c71-8534-35f07f37ea41",
+  "unpublishedPage": {
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 810,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "minHeight": 1250,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "positioning": "fixed",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 125,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 94,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Alumnos",
+    "slug": "alumnos",
+    "uniqueSlug": "alumnos"
+  }
+}

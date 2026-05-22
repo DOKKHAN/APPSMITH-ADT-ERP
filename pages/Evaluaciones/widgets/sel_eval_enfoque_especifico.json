@@ -1,0 +1,51 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 28,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "k_eval_enfoque_especifico",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Enfoque específico",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 42,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Seleccionar",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 54,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"ninguno\",\n    \"value\": \"ninguno\"\n  },\n  {\n    \"label\": \"gluteo\",\n    \"value\": \"gluteo\"\n  },\n  {\n    \"label\": \"abdomen\",\n    \"value\": \"abdomen\"\n  },\n  {\n    \"label\": \"manguito_rotador\",\n    \"value\": \"manguito_rotador\"\n  },\n  {\n    \"label\": \"espalda\",\n    \"value\": \"espalda\"\n  },\n  {\n    \"label\": \"hombro\",\n    \"value\": \"hombro\"\n  },\n  {\n    \"label\": \"pectoral\",\n    \"value\": \"pectoral\"\n  },\n  {\n    \"label\": \"brazos\",\n    \"value\": \"brazos\"\n  },\n  {\n    \"label\": \"cuadriceps\",\n    \"value\": \"cuadriceps\"\n  },\n  {\n    \"label\": \"isquio\",\n    \"value\": \"isquio\"\n  },\n  {\n    \"label\": \"gastrocnemio\",\n    \"value\": \"gastrocnemio\"\n  }\n]",
+  "topRow": 21,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w_eval_enfoque_especifico",
+  "widgetName": "sel_eval_enfoque_especifico"
+}

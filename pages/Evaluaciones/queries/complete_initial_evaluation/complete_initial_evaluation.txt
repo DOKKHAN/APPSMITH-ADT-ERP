@@ -1,0 +1,13 @@
+UPDATE adt.alumnos
+SET
+  objetivo = {{sel_eval_objetivo.selectedOptionValue}},
+  prioridad_recomposicion = {{sel_eval_prioridad_recomposicion.selectedOptionValue}},
+  enfoque_principal = {{sel_eval_enfoque_principal.selectedOptionValue}},
+  enfoque_especifico = {{HomeV2.noneToNull(sel_eval_enfoque_especifico.selectedOptionValue)}},
+  debilidad = {{HomeV2.noneToNull(sel_eval_debilidad.selectedOptionValue)}},
+  frecuencia_semanal = {{inp_eval_frecuencia.text || null}},
+  nivel_experiencia = {{sel_eval_nivel.selectedOptionValue}},
+  observaciones = {{inp_eval_observaciones.text || null}},
+  evaluacion_inicial = TRUE
+WHERE id_alumno = {{sel_eval_student.selectedOptionValue}}
+RETURNING *;

@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69b8602109cfa130e9690df8_4692c788-3996-4387-8d90-ecab4f65251d",
+  "id": "Home Page_Navigation",
+  "unpublishedCollection": {
+    "name": "Navigation",
+    "pageId": "Home Page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "tabs",
+        "value": "{\n  INICIO: 'Inicio',\n  RUTINAS: 'Rutinas',\n  ADMIN: 'Admin'\n}"
+      }
+    ]
+  }
+}

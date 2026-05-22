@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69b8602109cfa130e9690df8_6e339857-d265-47e0-a526-d99e2c4d8f82",
+  "id": "Home Page_utils",
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Home Page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "ejerciciosDefault",
+        "value": "[{\n  id: 73,\n  nombre: \"PLANCHA\",\n  grupo: \"ABDOMEN\"\n}, {\n  id: 141,\n  nombre: \"DEAD BUG\",\n  grupo: \"ABDOMEN\"\n}, {\n  id: 208,\n  nombre: \"HACK SQUAT\",\n  grupo: \"CUADRICEPS\"\n}, {\n  id: 12,\n  nombre: \"ESTOCADA FEMORAL\",\n  grupo: \"CUADRICEPS\"\n}, {\n  id: 78,\n  nombre: \"RDL\",\n  grupo: \"CADERA\"\n}, {\n  id: 45,\n  nombre: \"PUENTE GLUTEO UNILATERAL\",\n  grupo: \"CADERA\"\n}, {\n  id: 105,\n  nombre: \"FLEXION CODO\",\n  grupo: \"HOMBRO\"\n}, {\n  id: 55,\n  nombre: \"PRESS HOMBRO\",\n  grupo: \"HOMBRO\"\n}, {\n  id: 35,\n  nombre: \"REMO POLEA\",\n  grupo: \"HOMBRO\"\n}]"
+      }
+    ]
+  }
+}

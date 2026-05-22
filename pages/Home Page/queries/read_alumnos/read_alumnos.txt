@@ -1,0 +1,14 @@
+SELECT 
+    id_alumno,
+    nombre_completo,
+    rut,
+    fecha_nacimiento,
+    genero,
+    enfoque_especifico,
+    frecuencia_semanal,
+    nivel_experiencia,
+    fecha_ingreso,
+    estado_activo,
+    evaluacion_inicial
+FROM adt.alumnos
+ORDER BY id_alumno ASC;

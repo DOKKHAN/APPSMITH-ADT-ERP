@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 30,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mlu4jo28br",
+  "leftColumn": 13,
+  "minWidth": 120,
+  "mobileBottomRow": 52,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 48,
+  "needsErrorInfo": false,
+  "onClick": "{{Auth.login();}}",
+  "originalBottomRow": 30,
+  "originalTopRow": 26,
+  "parentColumnSpace": 16.71875,
+  "parentId": "8x1wv46n91",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "text": "Ingresar",
+  "topRow": 26,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "1y51z2z1ho",
+  "widgetName": "btn_entrar"
+}

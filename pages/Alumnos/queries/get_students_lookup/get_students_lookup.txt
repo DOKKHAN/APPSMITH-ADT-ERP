@@ -1,0 +1,9 @@
+SELECT
+  id_alumno AS value,
+  nombre_completo || ' (' || COALESCE(NULLIF(rut, ''), 'Sin RUT') || ')' AS label,
+  id_alumno,
+  nombre_completo,
+  COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut
+FROM adt.alumnos
+WHERE estado_activo = TRUE
+ORDER BY nombre_completo ASC;

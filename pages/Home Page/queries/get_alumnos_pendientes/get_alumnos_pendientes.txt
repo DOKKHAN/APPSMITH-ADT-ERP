@@ -1,0 +1,6 @@
+SELECT id_alumno, nombre_completo, rut, fecha_nacimiento, 
+       EXTRACT(YEAR FROM AGE(fecha_nacimiento)) as edad 
+FROM adt.alumnos
+WHERE evaluacion_inicial = FALSE
+AND estado_activo = TRUE
+ORDER BY nombre_completo ASC;

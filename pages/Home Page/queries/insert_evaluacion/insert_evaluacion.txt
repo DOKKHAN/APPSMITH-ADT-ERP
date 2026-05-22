@@ -1,0 +1,11 @@
+INSERT INTO adt.evaluaciones_movimiento 
+(id_alumno, id_ejercicio, punto_evaluado, peso_manejado, reps_logradas, rpe_observado, tecnica_calificacion)
+VALUES (
+  {{ sel_alumno.selectedOptionValue }}, 
+  {{ sel_ejercicio.selectedOptionValue }}, 
+  {{ input_punto.text }}, 
+  {{ input_peso.text }}, 
+  {{ input_reps.text }}, 
+  {{ input_rpe.text }}, 
+  {{ sel_tecnica.selectedOptionValue }}
+);

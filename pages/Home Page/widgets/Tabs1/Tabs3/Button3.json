@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 472,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n  (() => {\n    // 1. Bloqueo por Alumno\n    if (!sel_alumno.selectedOptionValue) return true;\n\n    // 2. Validar que TODOS los widgets en la vista actual sean válidos\n    // Esto revisa automáticamente si los \"Required\" están llenos y si los números son números\n    const hayCamposInvalidos = List1.currentItemsView.some((fila) => {\n      // Si alguno de estos es falso, some() devolverá true\n      return !fila.inp_peso.isValid || \n             !fila.inp_reps.isValid || \n             !fila.sel_tecnica.isValid;\n    });\n\n    // 3. Si hay menos filas de las que dice tu utils, también bloqueamos\n    const listaIncompleta = List1.currentItemsView.length < utils.ejerciciosDefault.length;\n\n    return hayCamposInvalidos || listaIncompleta;\n  })()\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "du6xkd5r7g",
+  "leftColumn": 25,
+  "minWidth": 120,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 38,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "onClick": "{{Process_Evaluacion.guardarTodo();}}",
+  "originalBottomRow": 472,
+  "originalTopRow": 468,
+  "parentColumnSpace": 15.439453125,
+  "parentId": "roa1nmirdq",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 41,
+  "text": "Guardar",
+  "topRow": 468,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "tygl4yqc59",
+  "widgetName": "Button3"
+}

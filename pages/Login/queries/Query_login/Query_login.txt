@@ -1,0 +1,5 @@
+SELECT id, email, nombre, tenant_esquema, rol
+FROM auth.usuarios
+WHERE email = {{inp_email.text}} 
+AND password_hash = crypt({{inp_password.text}}, password_hash)
+AND activo = true;

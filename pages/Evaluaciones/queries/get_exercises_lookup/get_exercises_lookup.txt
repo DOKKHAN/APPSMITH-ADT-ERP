@@ -1,0 +1,8 @@
+SELECT
+  id_ejercicio AS value,
+  nombre || ' - ' || COALESCE(grupo_muscular_primario, 'Sin grupo') AS label,
+  id_ejercicio,
+  nombre,
+  grupo_muscular_primario AS grupo
+FROM adt.ejercicios
+ORDER BY nombre ASC;

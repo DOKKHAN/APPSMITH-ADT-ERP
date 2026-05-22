@@ -1,0 +1,51 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 28,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "k_eval_enfoque_principal",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Enfoque principal",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 29,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Seleccionar",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 41,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"full_body\",\n    \"value\": \"full_body\"\n  },\n  {\n    \"label\": \"torso\",\n    \"value\": \"torso\"\n  },\n  {\n    \"label\": \"pierna\",\n    \"value\": \"pierna\"\n  },\n  {\n    \"label\": \"fullbody_torso_pierna\",\n    \"value\": \"fullbody_torso_pierna\"\n  },\n  {\n    \"label\": \"torso_pierna_torso\",\n    \"value\": \"torso_pierna_torso\"\n  },\n  {\n    \"label\": \"pierna_torso_pierna\",\n    \"value\": \"pierna_torso_pierna\"\n  }\n]",
+  "topRow": 21,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w_eval_enfoque_principal",
+  "widgetName": "sel_eval_enfoque_principal"
+}
