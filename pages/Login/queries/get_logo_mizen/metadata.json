@@ -44,7 +44,7 @@
     "dynamicBindingPathList": [],
     "name": "get_logo_mizen",
     "pageId": "Login",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

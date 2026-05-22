@@ -1,7 +1,7 @@
 {
   "appIsExample": false,
   "appLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "applicationDetail": {
     "appPositioning": {
@@ -60,10 +60,10 @@
   ],
   "staticUrlSettings": {
     "enabled": true,
-    "uniqueSlug": "mizen"
+    "uniqueSlug": "adt"
   },
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "unpublishedApplicationDetail": {
     "appPositioning": {
