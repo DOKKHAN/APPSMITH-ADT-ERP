@@ -82,9 +82,10 @@ export default {
       !!sel_eval_objetivo.selectedOptionValue &&
       !!sel_eval_prioridad_recomposicion.selectedOptionValue &&
       !!sel_eval_enfoque_principal.selectedOptionValue &&
+      this.enfoquePrincipalOptions().some((option) => option.value === sel_eval_enfoque_principal.selectedOptionValue) &&
       !!sel_eval_enfoque_especifico.selectedOptionValue &&
       !!sel_eval_debilidad.selectedOptionValue &&
-      !!inp_eval_frecuencia.text &&
+      !!inp_eval_frecuencia.selectedOptionValue &&
       !!sel_eval_nivel.selectedOptionValue &&
       this.validEvaluationRows().length > 0 &&
       this.validEvaluationRows().length === this.rawEvaluationRows().length;
@@ -123,6 +124,24 @@ export default {
 
   noneToNull(value) {
     return ['ninguno', 'ninguna', '', null, undefined].includes(value) ? null : value;
+  },
+
+  frecuenciaSemanal() {
+    return String(inp_eval_frecuencia.selectedOptionValue || '');
+  },
+
+  enfoquePrincipalOptions() {
+    const optionsByFrequency = {
+      '1': ['full_body', 'torso', 'pierna'],
+      '2': ['torso_pierna', 'pierna_torso'],
+      '3': ['fullbody_torso_pierna', 'torso_pierna_torso', 'pierna_torso_pierna'],
+      '4': ['pierna_torso_pierna_torso', 'torso_torso_pierna_torso'],
+      '5': []
+    };
+    return (optionsByFrequency[this.frecuenciaSemanal()] || []).map((value) => ({
+      label: value,
+      value
+    }));
   },
 
   routineAutomationPayload() {

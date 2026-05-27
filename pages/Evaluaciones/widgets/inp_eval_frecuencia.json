@@ -1,11 +1,10 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 36,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,18 +14,21 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "inputType": "NUMBER",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
+  "isFilterable": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
   "key": "kfe789673c0",
-  "label": "Frecuencia semanal",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
+  "labelText": "Frecuencia semanal",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 16,
@@ -37,16 +39,18 @@
   "parentColumnSpace": 16,
   "parentId": "0",
   "parentRowSpace": 10,
-  "placeholderText": "Ej: 3",
+  "onOptionChange": "{{resetWidget('sel_eval_enfoque_principal', true);}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "placeholderText": "Seleccionar",
   "renderMode": "CANVAS",
-  "resetOnSubmit": false,
   "responsiveBehavior": "fill",
   "rightColumn": 28,
-  "shouldAllowAutofill": false,
-  "showStepArrows": false,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"1\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"2\",\n    \"value\": \"2\"\n  },\n  {\n    \"label\": \"3\",\n    \"value\": \"3\"\n  },\n  {\n    \"label\": \"4\",\n    \"value\": \"4\"\n  },\n  {\n    \"label\": \"5\",\n    \"value\": \"5\"\n  }\n]",
   "topRow": 29,
-  "type": "INPUT_WIDGET_V2",
-  "version": 2,
+  "type": "SELECT_WIDGET",
+  "version": 1,
   "widgetId": "w4a8eeb244d",
   "widgetName": "inp_eval_frecuencia"
 }

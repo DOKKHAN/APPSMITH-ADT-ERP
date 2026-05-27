@@ -8,6 +8,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -42,7 +45,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 41,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"label\": \"full_body\",\n    \"value\": \"full_body\"\n  },\n  {\n    \"label\": \"torso\",\n    \"value\": \"torso\"\n  },\n  {\n    \"label\": \"pierna\",\n    \"value\": \"pierna\"\n  },\n  {\n    \"label\": \"fullbody_torso_pierna\",\n    \"value\": \"fullbody_torso_pierna\"\n  },\n  {\n    \"label\": \"torso_pierna_torso\",\n    \"value\": \"torso_pierna_torso\"\n  },\n  {\n    \"label\": \"pierna_torso_pierna\",\n    \"value\": \"pierna_torso_pierna\"\n  }\n]",
+  "sourceData": "{{HomeV2.enfoquePrincipalOptions()}}",
   "topRow": 21,
   "type": "SELECT_WIDGET",
   "version": 1,
