@@ -123,7 +123,7 @@ export default {
   },
 
   noneToNull(value) {
-    return ['ninguno', 'ninguna', '', null, undefined].includes(value) ? null : value;
+    return ['__none__', 'ninguno', 'ninguna', '', null, undefined].includes(value) ? null : value;
   },
 
   frecuenciaSemanal() {
@@ -133,10 +133,10 @@ export default {
   enfoquePrincipalOptions() {
     const optionsByFrequency = {
       '1': ['full_body', 'torso', 'pierna'],
-      '2': ['torso_pierna', 'pierna_torso'],
-      '3': ['fullbody_torso_pierna', 'torso_pierna_torso', 'pierna_torso_pierna'],
-      '4': ['pierna_torso_pierna_torso', 'torso_torso_pierna_torso'],
-      '5': []
+      '2': ['full_body', 'torso', 'pierna', 'torso_pierna'],
+      '3': ['full_body', 'torso', 'pierna', 'fullbody_torso_pierna', 'torso_pierna_torso', 'pierna_torso_pierna'],
+      '4': ['torso', 'pierna_torso_pierna_torso', 'torso_torso_pierna_torso'],
+      '5': ['torso', 'pierna_torso_pierna_torso', 'torso_torso_pierna_torso']
     };
     return (optionsByFrequency[this.frecuenciaSemanal()] || []).map((value) => ({
       label: value,

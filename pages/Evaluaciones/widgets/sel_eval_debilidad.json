@@ -42,7 +42,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 15,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"label\": \"ninguna\",\n    \"value\": \"ninguna\"\n  },\n  {\n    \"label\": \"gluteo\",\n    \"value\": \"gluteo\"\n  },\n  {\n    \"label\": \"abdomen\",\n    \"value\": \"abdomen\"\n  },\n  {\n    \"label\": \"manguito_rotador\",\n    \"value\": \"manguito_rotador\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"label\": \"null\",\n    \"value\": \"__none__\"\n  },\n  {\n    \"label\": \"gluteo\",\n    \"value\": \"gluteo\"\n  },\n  {\n    \"label\": \"abdomen\",\n    \"value\": \"abdomen\"\n  },\n  {\n    \"label\": \"manguito_rotador\",\n    \"value\": \"manguito_rotador\"\n  }\n]",
   "topRow": 29,
   "type": "SELECT_WIDGET",
   "version": 1,
