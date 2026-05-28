@@ -1,7 +1,7 @@
 UPDATE adt.alumnos
 SET
   objetivo = {{sel_eval_objetivo.selectedOptionValue}},
-  prioridad_recomposicion = {{sel_eval_prioridad_recomposicion.selectedOptionValue}},
+  prioridad_recomposicion = {{sel_eval_objetivo.selectedOptionValue === 'recomposicion_corporal' ? sel_eval_prioridad_recomposicion.selectedOptionValue : null}},
   enfoque_principal = {{sel_eval_enfoque_principal.selectedOptionValue}},
   enfoque_especifico = {{HomeV2.noneToNull(sel_eval_enfoque_especifico.selectedOptionValue)}},
   debilidad = {{HomeV2.noneToNull(sel_eval_debilidad.selectedOptionValue)}},

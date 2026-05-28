@@ -80,7 +80,7 @@ export default {
     return !!sel_eval_student.selectedOptionValue &&
       !['__empty__', '__loading__'].includes(sel_eval_student.selectedOptionValue) &&
       !!sel_eval_objetivo.selectedOptionValue &&
-      !!sel_eval_prioridad_recomposicion.selectedOptionValue &&
+      (sel_eval_objetivo.selectedOptionValue !== 'recomposicion_corporal' || !!sel_eval_prioridad_recomposicion.selectedOptionValue) &&
       !!sel_eval_enfoque_principal.selectedOptionValue &&
       this.enfoquePrincipalOptions().some((option) => option.value === sel_eval_enfoque_principal.selectedOptionValue) &&
       !!sel_eval_enfoque_especifico.selectedOptionValue &&
@@ -133,9 +133,9 @@ export default {
   enfoquePrincipalOptions() {
     const optionsByFrequency = {
       '1': ['full_body', 'torso', 'pierna'],
-      '2': ['full_body', 'torso', 'pierna', 'torso_pierna'],
-      '3': ['full_body', 'torso', 'pierna', 'fullbody_torso_pierna', 'torso_pierna_torso', 'pierna_torso_pierna'],
-      '4': ['torso', 'pierna_torso_pierna_torso', 'torso_torso_pierna_torso'],
+      '2': ['full_body', 'torso', 'pierna', 'pierna_torso', 'torso_pierna'],
+      '3': ['full_body', 'torso', 'fullbody_torso_pierna', 'torso_pierna_torso', 'pierna_torso_pierna'],
+      '4': ['pierna_torso_pierna_torso', 'torso_torso_pierna_torso'],
       '5': ['torso', 'pierna_torso_pierna_torso', 'torso_torso_pierna_torso']
     };
     return (optionsByFrequency[this.frecuenciaSemanal()] || []).map((value) => ({
@@ -148,8 +148,11 @@ export default {
     return [
       {
         id_alumno: Number(sel_eval_student.selectedOptionValue),
+        frecuencia_semanal: Number(inp_eval_frecuencia.selectedOptionValue),
         objetivo: sel_eval_objetivo.selectedOptionValue,
-        prioridad_recomposicion: sel_eval_prioridad_recomposicion.selectedOptionValue,
+        prioridad_recomposicion: sel_eval_objetivo.selectedOptionValue === 'recomposicion_corporal'
+          ? sel_eval_prioridad_recomposicion.selectedOptionValue
+          : null,
         enfoque_principal: sel_eval_enfoque_principal.selectedOptionValue,
         enfoque_especifico: this.noneToNull(sel_eval_enfoque_especifico.selectedOptionValue),
         debilidad: this.noneToNull(sel_eval_debilidad.selectedOptionValue)

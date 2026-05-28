@@ -8,6 +8,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isRequired"
     }
   ],
   "dynamicPropertyPathList": [
@@ -19,7 +22,7 @@
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
-  "isRequired": true,
+  "isRequired": "{{sel_eval_objetivo.selectedOptionValue === 'recomposicion_corporal'}}",
   "isVisible": true,
   "key": "k_eval_prioridad_recomposicion",
   "labelAlignment": "left",
