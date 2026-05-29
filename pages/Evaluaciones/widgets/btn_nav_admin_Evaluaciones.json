@@ -1,16 +1,12 @@
 {
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "borderRadius": "8px",
+  "bottomRow": 19,
   "boxShadow": "none",
-  "buttonColor": "#2b2b2b",
+  "buttonColor": "#111827",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -23,8 +19,8 @@
   "isLoading": false,
   "isVisible": true,
   "key": "ked60f62189",
-  "leftColumn": 51,
-  "minWidth": 120,
+  "leftColumn": 1,
+  "minWidth": 80,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('Administrador');}}",
   "parentColumnSpace": 16,
@@ -35,9 +31,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 58,
-  "text": "Administrador",
-  "topRow": 1,
+  "rightColumn": 8,
+  "text": "Administración",
+  "topRow": 14,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "w2ae9ef84cb",

@@ -1,19 +1,12 @@
 {
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "borderRadius": "8px",
+  "bottomRow": 22,
   "boxShadow": "none",
-  "buttonColor": "#2b2b2b",
+  "buttonColor": "#374151",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "buttonColor"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -26,8 +19,8 @@
   "isLoading": false,
   "isVisible": true,
   "key": "k98bb439b32",
-  "leftColumn": 38,
-  "minWidth": 120,
+  "leftColumn": 9,
+  "minWidth": 80,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('Rutinas');}}",
   "parentColumnSpace": 16,
@@ -38,9 +31,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 48,
+  "rightColumn": 19,
   "text": "Rutinas",
-  "topRow": 1,
+  "topRow": 18,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "wcba2b37f64",

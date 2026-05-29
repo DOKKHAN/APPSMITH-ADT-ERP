@@ -1,16 +1,12 @@
 {
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "borderRadius": "8px",
+  "bottomRow": 79,
   "boxShadow": "none",
-  "buttonColor": "#b91c1c",
+  "buttonColor": "#111827",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -23,8 +19,8 @@
   "isLoading": false,
   "isVisible": true,
   "key": "k447c50388e",
-  "leftColumn": 59,
-  "minWidth": 120,
+  "leftColumn": 1,
+  "minWidth": 80,
   "needsErrorInfo": false,
   "onClick": "{{Promise.all([removeValue('user_id'), removeValue('user_name'), removeValue('tenant_schema'), removeValue('user_role'), removeValue('selectedTab')]).then(() => { showAlert('Has cerrado sesión correctamente', 'success'); navigateTo('Login'); });}}",
   "parentColumnSpace": 16,
@@ -35,9 +31,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
-  "text": "Cerrar sesión",
-  "topRow": 1,
+  "rightColumn": 8,
+  "text": "Salir",
+  "topRow": 74,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "w7421f49f84",

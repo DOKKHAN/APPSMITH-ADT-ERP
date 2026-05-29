@@ -1,28 +1,32 @@
 {
   "animateLoading": true,
   "borderRadius": "8px",
-  "bottomRow": 17,
+  "bottomRow": 13,
   "boxShadow": "none",
-  "buttonColor": "#374151",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
   "iconAlign": "left",
-  "iconName": "clipboard",
+  "iconName": "pulse",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "kee7d3a0231",
-  "leftColumn": 9,
+  "key": "k_nav_training_Rutinas",
+  "leftColumn": 1,
   "minWidth": 80,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Evaluaciones');}}",
+  "onClick": "{{navigateTo('Alumnos');}}",
   "parentColumnSpace": 16,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -31,11 +35,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
-  "text": "Evaluación",
-  "topRow": 13,
+  "rightColumn": 8,
+  "text": "Entrenamiento",
+  "topRow": 8,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "w4403d90f68",
-  "widgetName": "btn_nav_evaluaciones_Home_V2"
+  "widgetId": "wd_nav_training_rutinas",
+  "widgetName": "btn_nav_training_Rutinas"
 }
