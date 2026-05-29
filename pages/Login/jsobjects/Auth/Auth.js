@@ -43,7 +43,7 @@ export default {
     async fadeSlogan(opacitySteps) {
         for (const opacity of opacitySteps) {
             await storeValue("login_slogan_opacity", opacity);
-            await new Promise(resolve => setTimeout(resolve, 45));
+            await new Promise(resolve => setTimeout(resolve, 90));
         }
     },
 
