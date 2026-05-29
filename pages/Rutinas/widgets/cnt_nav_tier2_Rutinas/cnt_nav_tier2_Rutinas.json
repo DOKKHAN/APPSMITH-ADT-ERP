@@ -40,17 +40,13 @@
     }
   ],
   "containerStyle": "card",
-  "dynamicBindingPathList": [
-    {
-      "key": "isVisible"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": "{{!!appsmith.store.activeNavTier}}",
+  "isVisible": false,
   "key": "k_nav_tier2_panel_Rutinas",
   "leftColumn": 6,
   "maxDynamicHeight": 9000,
