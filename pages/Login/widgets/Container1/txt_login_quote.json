@@ -1,8 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 48,
+  "bottomRow": 50,
   "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
     {
       "key": "borderRadius"
     },
@@ -30,7 +33,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 25,
   "shouldTruncate": false,
-  "text": "\"Entrena, mide tu progreso y sigue avanzando.\"",
+  "text": "{{appsmith.store.login_slogan || Auth.defaultSlogan}}",
   "textAlign": "LEFT",
   "textColor": "#FFFFFF",
   "topRow": 40,

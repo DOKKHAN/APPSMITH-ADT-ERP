@@ -1,4 +1,32 @@
 export default {
+    defaultSlogan: "\"Entrena, mide tu progreso y sigue avanzando.\"",
+
+    slogans: [
+        "\"Tu compromiso hoy es su éxito mañana.\"",
+        "\"Presentes en cada paso, desde el primer día.\"",
+        "\"Acompañar no es una tarea, es nuestra promesa.\"",
+        "\"Expertos en guiar, apasionados por servir.\"",
+        "\"La excelencia se nota en los detalles que cuidas.\"",
+        "\"Somos el equipo que hace el entrenamiento más humano.\""
+    ],
+
+    async init() {
+        const randomIndex = Math.floor(Math.random() * this.slogans.length);
+        await storeValue("login_slogan_index", randomIndex);
+        await storeValue("login_slogan", this.slogans[randomIndex]);
+
+        clearInterval("login_slogan_rotation");
+        setInterval(() => Auth.rotateSlogan(), 5000, "login_slogan_rotation");
+    },
+
+    async rotateSlogan() {
+        const currentIndex = Number(appsmith.store.login_slogan_index ?? -1);
+        const nextIndex = (currentIndex + 1) % this.slogans.length;
+
+        await storeValue("login_slogan_index", nextIndex);
+        await storeValue("login_slogan", this.slogans[nextIndex]);
+    },
+
     async login() {
         if (!inp_email.text || !inp_password.text) {
             showAlert("Por favor, llena todos los campos", "warning");

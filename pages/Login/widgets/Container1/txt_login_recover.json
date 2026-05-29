@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 43,
+  "bottomRow": 46,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -36,7 +36,7 @@
   "text": "¿Olvidaste tu contraseña?",
   "textAlign": "LEFT",
   "textColor": "#6D28D9",
-  "topRow": 40,
+  "topRow": 43,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
