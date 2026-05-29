@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 50,
+  "bottomRow": 49,
   "dynamicBindingPathList": [
     {
       "key": "text"
@@ -36,7 +36,7 @@
   "text": "{{appsmith.store.login_slogan || Auth.defaultSlogan}}",
   "textAlign": "LEFT",
   "textColor": "#FFFFFF",
-  "topRow": 40,
+  "topRow": 39,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

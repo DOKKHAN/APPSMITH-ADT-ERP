@@ -1,5 +1,5 @@
 export default {
-    defaultSlogan: "\"Entrena, mide tu progreso y sigue avanzando.\"",
+    defaultSlogan: "\"Tu compromiso hoy es su éxito mañana.\"",
 
     slogans: [
         "\"Tu compromiso hoy es su éxito mañana.\"",
