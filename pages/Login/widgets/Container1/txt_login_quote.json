@@ -7,6 +7,9 @@
       "key": "text"
     },
     {
+      "key": "textColor"
+    },
+    {
       "key": "fontFamily"
     }
   ],
@@ -34,7 +37,7 @@
   "shouldTruncate": false,
   "text": "{{appsmith.store.login_slogan || Auth.defaultSlogan}}",
   "textAlign": "LEFT",
-  "textColor": "#FFFFFF",
+  "textColor": "{{'rgba(255, 255, 255, ' + (appsmith.store.login_slogan_opacity ?? 1) + ')'}}",
   "topRow": 39,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

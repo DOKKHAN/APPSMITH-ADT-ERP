@@ -12,6 +12,7 @@ export default {
 
     async init() {
         const randomIndex = Math.floor(Math.random() * this.slogans.length);
+        await storeValue("login_slogan_opacity", 1);
         await storeValue("login_slogan_index", randomIndex);
         await storeValue("login_slogan", this.slogans[randomIndex]);
 
@@ -20,11 +21,30 @@ export default {
     },
 
     async rotateSlogan() {
-        const currentIndex = Number(appsmith.store.login_slogan_index ?? -1);
-        const nextIndex = (currentIndex + 1) % this.slogans.length;
+        if (appsmith.store.login_slogan_animating) {
+            return;
+        }
 
-        await storeValue("login_slogan_index", nextIndex);
-        await storeValue("login_slogan", this.slogans[nextIndex]);
+        try {
+            await storeValue("login_slogan_animating", true);
+            const currentIndex = Number(appsmith.store.login_slogan_index ?? -1);
+            const nextIndex = (currentIndex + 1) % this.slogans.length;
+
+            await this.fadeSlogan([1, 0.86, 0.68, 0.48, 0.3, 0.14]);
+            await storeValue("login_slogan_index", nextIndex);
+            await storeValue("login_slogan", this.slogans[nextIndex]);
+            await this.fadeSlogan([0.14, 0.3, 0.48, 0.68, 0.86, 1]);
+        } finally {
+            await storeValue("login_slogan_opacity", 1);
+            await storeValue("login_slogan_animating", false);
+        }
+    },
+
+    async fadeSlogan(opacitySteps) {
+        for (const opacity of opacitySteps) {
+            await storeValue("login_slogan_opacity", opacity);
+            await new Promise(resolve => setTimeout(resolve, 45));
+        }
     },
 
     async login() {
