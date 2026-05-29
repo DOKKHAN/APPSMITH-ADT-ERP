@@ -16,7 +16,11 @@ SELECT
 	e.es_primario,
 	e.es_secundario,
 	e.es_terciario,
-  b.objetivo_muscular
+  b.objetivo_muscular,
+	e.grupo_muscular_primario,
+	e.grupo_muscular_secundario,
+	e.grupo_muscular_terciario,
+	e.maquina
   --b.series,
   --b.reps_min || ' - ' || b.reps_max AS repeticiones,
   --b.rir_objetivo,
