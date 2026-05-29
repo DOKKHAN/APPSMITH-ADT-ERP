@@ -17,7 +17,7 @@ export default {
         await storeValue("login_slogan", this.slogans[randomIndex]);
 
         clearInterval("login_slogan_rotation");
-        setInterval(() => Auth.rotateSlogan(), 5000, "login_slogan_rotation");
+        setInterval(() => Auth.rotateSlogan(), 10000, "login_slogan_rotation");
     },
 
     async rotateSlogan() {
@@ -43,7 +43,7 @@ export default {
     async fadeSlogan(opacitySteps) {
         for (const opacity of opacitySteps) {
             await storeValue("login_slogan_opacity", opacity);
-            await new Promise(resolve => setTimeout(resolve, 90));
+            await new Promise(resolve => setTimeout(resolve, 45));
         }
     },
 
