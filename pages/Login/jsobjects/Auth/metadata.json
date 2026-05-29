@@ -6,6 +6,15 @@
     "pageId": "Login",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "defaultSlogan",
+        "value": "\"\\\"Tu compromiso hoy es su éxito mañana.\\\"\""
+      },
+      {
+        "name": "slogans",
+        "value": "[\"\\\"Tu compromiso hoy es su éxito mañana.\\\"\", \"\\\"Presentes en cada paso, desde el primer día.\\\"\", \"\\\"Acompañar no es una tarea, es nuestra promesa.\\\"\", \"\\\"Expertos en guiar, apasionados por servir.\\\"\", \"\\\"La excelencia se nota en los detalles que cuidas.\\\"\", \"\\\"Somos el equipo que hace el entrenamiento más humano.\\\"\"]"
+      }
+    ]
   }
 }

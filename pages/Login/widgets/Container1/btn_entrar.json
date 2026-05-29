@@ -1,15 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52,
+  "bottomRow": 46,
   "boxShadow": "none",
   "buttonColor": "#6D28D9",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -32,8 +29,8 @@
   "mobileTopRow": 48,
   "needsErrorInfo": false,
   "onClick": "{{Auth.login();}}",
-  "originalBottomRow": 31,
-  "originalTopRow": 27,
+  "originalBottomRow": 46,
+  "originalTopRow": 42,
   "parentColumnSpace": 16.71875,
   "parentId": "8x1wv46n91",
   "parentRowSpace": 10,
@@ -44,7 +41,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 56,
   "text": "Iniciar sesión",
-  "topRow": 48,
+  "topRow": 42,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "1y51z2z1ho",

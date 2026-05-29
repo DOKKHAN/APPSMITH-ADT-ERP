@@ -4,9 +4,6 @@
   "bottomRow": 7,
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
-    },
-    {
       "key": "fontFamily"
     }
   ],
