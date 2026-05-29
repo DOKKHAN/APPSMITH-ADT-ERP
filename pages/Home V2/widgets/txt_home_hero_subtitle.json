@@ -29,7 +29,7 @@
   "shouldTruncate": false,
   "text": "Selecciona un módulo desde el menú superior.",
   "textAlign": "CENTER",
-  "textColor": "#231F20",
+  "textColor": "#F9FAFB",
   "topRow": 30,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

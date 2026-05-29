@@ -35,7 +35,7 @@
   "labelText": "Buscar alumno sin evaluación inicial",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 20,
+  "leftColumn": 22,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,

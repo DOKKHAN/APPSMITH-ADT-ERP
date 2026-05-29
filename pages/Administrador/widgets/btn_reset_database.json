@@ -26,7 +26,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "kb017e77e8f",
-  "leftColumn": 20,
+  "leftColumn": 22,
   "minWidth": 120,
   "needsErrorInfo": false,
   "onClick": "{{Drive_to_PSQL.run().then(() => showAlert('Reset de base de datos iniciado', 'success')).catch((error) => showAlert('Error ejecutando reset: ' + error.message, 'error'));}}",

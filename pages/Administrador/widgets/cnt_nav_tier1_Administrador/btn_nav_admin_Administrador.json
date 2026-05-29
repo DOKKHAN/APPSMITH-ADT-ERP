@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "12px",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "buttonColor": "{{(appsmith.store.activeNavTier || 'admin') === 'admin' ? '#6366F1' : '#0F172A'}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "settings",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "k80076e646a",
+  "leftColumn": 1,
+  "minWidth": 40,
+  "needsErrorInfo": false,
+  "onClick": "{{storeValue('activeNavTier', 'admin');}}",
+  "parentColumnSpace": 16,
+  "parentId": "wd_nav_tier1_canvas_administrador",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 5,
+  "text": "",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "w6ea5804abf",
+  "widgetName": "btn_nav_admin_Administrador"
+}

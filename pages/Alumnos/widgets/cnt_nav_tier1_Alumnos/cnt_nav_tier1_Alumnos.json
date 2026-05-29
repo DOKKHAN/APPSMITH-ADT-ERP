@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "backgroundColor": "#0F172A",
-  "borderColor": "#0F172A",
+  "borderColor": "#263244",
   "borderRadius": "0px",
   "borderWidth": "0",
   "bottomRow": 125,
@@ -36,7 +36,7 @@
       "type": "CANVAS_WIDGET",
       "version": 1,
       "widgetId": "wd_nav_tier1_canvas_alumnos",
-      "widgetName": "Canvas_nav_tier1_Alumnos"
+      "widgetName": "Canvas_nav_tier1_alumnos"
     }
   ],
   "containerStyle": "card",

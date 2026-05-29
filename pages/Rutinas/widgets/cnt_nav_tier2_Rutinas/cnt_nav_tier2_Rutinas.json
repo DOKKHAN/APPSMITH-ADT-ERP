@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#F8FAFC",
-  "borderColor": "#E5E7EB",
+  "backgroundColor": "#111827",
+  "borderColor": "#263244",
   "borderRadius": "0px",
-  "borderWidth": "0",
+  "borderWidth": "1",
   "bottomRow": 125,
   "boxShadow": "none",
   "children": [
@@ -31,12 +31,12 @@
       "parentId": "wd_nav_tier2_panel_rutinas",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
-      "rightColumn": 224,
+      "rightColumn": 240,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
       "widgetId": "wd_nav_tier2_canvas_rutinas",
-      "widgetName": "Canvas_nav_tier2_Rutinas"
+      "widgetName": "Canvas_nav_tier2_rutinas"
     }
   ],
   "containerStyle": "card",
@@ -46,7 +46,7 @@
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": false,
+  "isVisible": true,
   "key": "k_nav_tier2_panel_Rutinas",
   "leftColumn": 6,
   "maxDynamicHeight": 9000,
@@ -60,7 +60,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 21,
   "shouldScrollContents": false,
   "topRow": 0,
   "type": "CONTAINER_WIDGET",

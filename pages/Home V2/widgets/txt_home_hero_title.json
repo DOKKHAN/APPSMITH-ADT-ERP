@@ -29,7 +29,7 @@
   "shouldTruncate": false,
   "text": "ADT Rutina",
   "textAlign": "CENTER",
-  "textColor": "#231F20",
+  "textColor": "#F9FAFB",
   "topRow": 20,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

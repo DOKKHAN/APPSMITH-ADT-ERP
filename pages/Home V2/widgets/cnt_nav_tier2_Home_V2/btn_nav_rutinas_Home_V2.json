@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "12px",
+  "bottomRow": 30,
+  "boxShadow": "none",
+  "buttonColor": "#111827",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{(appsmith.store.activeNavTier || 'training') === 'training'}}",
+  "key": "k98bb439b32",
+  "leftColumn": 2,
+  "minWidth": 40,
+  "needsErrorInfo": false,
+  "onClick": "{{storeValue('activeNavTier', 'training').then(() => navigateTo('Rutinas'));}}",
+  "parentColumnSpace": 16,
+  "parentId": "wd_nav_tier2_canvas_homev2",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 13,
+  "text": "Rutinas",
+  "topRow": 26,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "wcba2b37f64",
+  "widgetName": "btn_nav_rutinas_Home_V2"
+}
