@@ -17,7 +17,7 @@ export default {
         await storeValue("login_slogan", this.slogans[randomIndex]);
 
         clearInterval("login_slogan_rotation");
-        setInterval(() => Auth.rotateSlogan(), 10000, "login_slogan_rotation");
+        setInterval(() => Auth.rotateSlogan(), 6000, "login_slogan_rotation");
     },
 
     async rotateSlogan() {
