@@ -5,14 +5,14 @@
     "layouts": [
       {
         "dsl": {
-          "backgroundColor": "none",
-          "bottomRow": 440,
+          "backgroundColor": "#F3F4F6",
+          "bottomRow": 700,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 840,
+          "minHeight": 700,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,

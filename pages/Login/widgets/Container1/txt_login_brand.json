@@ -1,52 +1,42 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 7,
   "dynamicBindingPathList": [
     {
-      "key": "truncateButtonColor"
+      "key": "borderRadius"
     },
     {
       "key": "fontFamily"
-    },
-    {
-      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.5rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "vp16r8wuhh",
-  "leftColumn": 34,
+  "key": "loginbrand01",
+  "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8,
-  "mobileLeftColumn": 24,
-  "mobileRightColumn": 40,
-  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
-  "originalTopRow": 4,
   "overflow": "NONE",
-  "parentColumnSpace": 6.4140625,
+  "parentColumnSpace": 16.71875,
   "parentId": "8x1wv46n91",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
+  "rightColumn": 24,
   "shouldTruncate": false,
-  "text": "Bienvenido a A Darlo Todo",
-  "textAlign": "CENTER",
-  "textColor": "#231F20",
-  "topRow": 17,
+  "text": "A DARLO TODO",
+  "textAlign": "LEFT",
+  "textColor": "#FFFFFF",
+  "topRow": 3,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "kd239y0h3j",
-  "widgetName": "Text1"
+  "widgetId": "loginbrandtxt1",
+  "widgetName": "txt_login_brand"
 }
