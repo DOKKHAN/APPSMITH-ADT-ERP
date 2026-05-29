@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "8px",
-  "bottomRow": 17,
+  "bottomRow": 23,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -9,6 +9,9 @@
   "dynamicBindingPathList": [
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -17,16 +20,16 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "clipboard",
+  "iconName": "",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{appsmith.store.activeNavTier === 'training'}}",
   "key": "keea40638da",
-  "leftColumn": 9,
-  "minWidth": 80,
+  "leftColumn": 7,
+  "minWidth": 40,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Evaluaciones');}}",
+  "onClick": "{{removeValue('activeNavTier').then(() => navigateTo('Evaluaciones'));}}",
   "parentColumnSpace": 16,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -35,9 +38,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 18,
   "text": "Evaluación",
-  "topRow": 13,
+  "topRow": 19,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "w1af9ca1b0e",

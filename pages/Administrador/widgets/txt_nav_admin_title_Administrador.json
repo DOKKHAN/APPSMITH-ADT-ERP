@@ -1,0 +1,34 @@
+{
+  "animateLoading": true,
+  "bottomRow": 12,
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{appsmith.store.activeNavTier === 'admin'}}",
+  "key": "k_nav_admin_title_Administrador",
+  "leftColumn": 7,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 18,
+  "text": "Administración",
+  "textAlign": "LEFT",
+  "textColor": "#111827",
+  "textSize": "1.25rem",
+  "topRow": 8,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "wd_nav_admin_title_administrador",
+  "widgetName": "txt_nav_admin_title_Administrador",
+  "fontSize": "1rem"
+}

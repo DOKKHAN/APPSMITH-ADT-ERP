@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "8px",
-  "bottomRow": 12,
+  "bottomRow": 18,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -9,6 +9,9 @@
   "dynamicBindingPathList": [
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -17,16 +20,16 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "users",
+  "iconName": "",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{appsmith.store.activeNavTier === 'training'}}",
   "key": "k80210f1aaf",
-  "leftColumn": 9,
-  "minWidth": 80,
+  "leftColumn": 7,
+  "minWidth": 40,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Alumnos');}}",
+  "onClick": "{{removeValue('activeNavTier').then(() => navigateTo('Alumnos'));}}",
   "parentColumnSpace": 16,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -35,9 +38,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 18,
   "text": "Alumnos",
-  "topRow": 8,
+  "topRow": 14,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "wd90d23576a",
