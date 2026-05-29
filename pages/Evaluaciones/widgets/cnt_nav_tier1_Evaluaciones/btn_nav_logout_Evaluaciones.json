@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
-  "borderRadius": "12px",
-  "bottomRow": 64,
+  "borderRadius": "14px",
+  "bottomRow": 114,
   "boxShadow": "none",
   "buttonColor": "#0F172A",
   "buttonVariant": "PRIMARY",
@@ -19,7 +19,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "k407e94b91f",
-  "leftColumn": 1,
+  "leftColumn": 14,
   "minWidth": 40,
   "needsErrorInfo": false,
   "onClick": "{{Promise.all([removeValue('activeNavTier'), removeValue('user_id'), removeValue('user_name'), removeValue('tenant_schema'), removeValue('user_role'), removeValue('selectedTab')]).then(() => { showAlert('Has cerrado sesión correctamente', 'success'); navigateTo('Login'); });}}",
@@ -31,11 +31,12 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 5,
+  "rightColumn": 50,
   "text": "",
-  "topRow": 58,
+  "topRow": 108,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "w2dc113cb50",
-  "widgetName": "btn_nav_logout_Evaluaciones"
+  "widgetName": "btn_nav_logout_Evaluaciones",
+  "iconColor": "#CBD5E1"
 }

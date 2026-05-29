@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -16,12 +16,12 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1.35rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": "{{(appsmith.store.activeNavTier || 'training') === 'training'}}",
   "key": "k_nav_training_title_Home_V2",
-  "leftColumn": 2,
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 40,
@@ -31,12 +31,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13,
+  "rightColumn": 58,
   "shouldTruncate": false,
   "text": "Entrenamiento",
   "textAlign": "LEFT",
   "textColor": "#F9FAFB",
-  "topRow": 3,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

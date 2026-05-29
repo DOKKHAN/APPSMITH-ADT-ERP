@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "bottomRow": 7,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "isVisible"
@@ -11,7 +11,7 @@
   "isLoading": false,
   "isVisible": "{{(appsmith.store.activeNavTier || 'admin') === 'training'}}",
   "key": "k_nav_training_title_Administrador",
-  "leftColumn": 2,
+  "leftColumn": 6,
   "minWidth": 40,
   "needsErrorInfo": false,
   "overflow": "NONE",
@@ -20,15 +20,15 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13,
+  "rightColumn": 58,
   "text": "Entrenamiento",
   "textAlign": "LEFT",
   "textColor": "#F9FAFB",
   "textSize": "1.25rem",
-  "topRow": 3,
+  "topRow": 4,
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "wd_nav_training_title_administrador",
   "widgetName": "txt_nav_training_title_Administrador",
-  "fontSize": "1.25rem"
+  "fontSize": "1.35rem"
 }

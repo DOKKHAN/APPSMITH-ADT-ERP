@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "backgroundColor": "#0F172A",
-  "borderColor": "#263244",
+  "borderColor": "#0F172A",
   "borderRadius": "0px",
-  "borderWidth": "0",
+  "borderWidth": "0px",
   "bottomRow": 125,
   "boxShadow": "none",
   "children": [
