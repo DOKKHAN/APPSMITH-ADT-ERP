@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#0F172A",
+  "backgroundColor": "#F8FAFC",
   "borderColor": "#E5E7EB",
   "borderRadius": "0px",
   "borderWidth": "0",
@@ -24,31 +24,35 @@
       "hideCard": true,
       "isLoading": false,
       "isVisible": true,
-      "key": "k_wd_nav_tier1_canvas_evaluaciones",
+      "key": "k_wd_nav_tier2_canvas_administrador",
       "leftColumn": 0,
       "minHeight": 1250,
       "parentColumnSpace": 1,
-      "parentId": "wd_nav_tier1_panel_evaluaciones",
+      "parentId": "wd_nav_tier2_panel_administrador",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
-      "rightColumn": 96,
+      "rightColumn": 224,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "wd_nav_tier1_canvas_evaluaciones",
-      "widgetName": "Canvas_nav_tier1_Evaluaciones"
+      "widgetId": "wd_nav_tier2_canvas_administrador",
+      "widgetName": "Canvas_nav_tier2_Administrador"
     }
   ],
   "containerStyle": "card",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
-  "key": "k_nav_tier1_panel_Evaluaciones",
-  "leftColumn": 0,
+  "isVisible": "{{!!appsmith.store.activeNavTier}}",
+  "key": "k_nav_tier2_panel_Administrador",
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 40,
@@ -60,11 +64,11 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 6,
+  "rightColumn": 20,
   "shouldScrollContents": false,
   "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "wd_nav_tier1_panel_evaluaciones",
-  "widgetName": "cnt_nav_tier1_Evaluaciones"
+  "widgetId": "wd_nav_tier2_panel_administrador",
+  "widgetName": "cnt_nav_tier2_Administrador"
 }

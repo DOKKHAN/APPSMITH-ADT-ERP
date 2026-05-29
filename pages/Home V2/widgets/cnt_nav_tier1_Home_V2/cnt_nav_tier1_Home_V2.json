@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#F8FAFC",
+  "backgroundColor": "#0F172A",
   "borderColor": "#E5E7EB",
   "borderRadius": "0px",
   "borderWidth": "0",
@@ -24,35 +24,31 @@
       "hideCard": true,
       "isLoading": false,
       "isVisible": true,
-      "key": "k_wd_nav_tier2_canvas_rutinas",
+      "key": "k_wd_nav_tier1_canvas_homev2",
       "leftColumn": 0,
       "minHeight": 1250,
       "parentColumnSpace": 1,
-      "parentId": "wd_nav_tier2_panel_rutinas",
+      "parentId": "wd_nav_tier1_panel_homev2",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
-      "rightColumn": 224,
+      "rightColumn": 96,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "wd_nav_tier2_canvas_rutinas",
-      "widgetName": "Canvas_nav_tier2_Rutinas"
+      "widgetId": "wd_nav_tier1_canvas_homev2",
+      "widgetName": "Canvas_nav_tier1_Home_V2"
     }
   ],
   "containerStyle": "card",
-  "dynamicBindingPathList": [
-    {
-      "key": "isVisible"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": "{{!!appsmith.store.activeNavTier}}",
-  "key": "k_nav_tier2_panel_Rutinas",
-  "leftColumn": 6,
+  "isVisible": true,
+  "key": "k_nav_tier1_panel_Home_V2",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 40,
@@ -64,11 +60,11 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 6,
   "shouldScrollContents": false,
   "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "wd_nav_tier2_panel_rutinas",
-  "widgetName": "cnt_nav_tier2_Rutinas"
+  "widgetId": "wd_nav_tier1_panel_homev2",
+  "widgetName": "cnt_nav_tier1_Home_V2"
 }

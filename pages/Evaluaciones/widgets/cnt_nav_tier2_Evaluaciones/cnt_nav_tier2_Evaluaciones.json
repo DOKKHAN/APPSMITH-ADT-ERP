@@ -24,19 +24,19 @@
       "hideCard": true,
       "isLoading": false,
       "isVisible": true,
-      "key": "k_wd_nav_tier2_canvas_alumnos",
+      "key": "k_wd_nav_tier2_canvas_evaluaciones",
       "leftColumn": 0,
       "minHeight": 1250,
       "parentColumnSpace": 1,
-      "parentId": "wd_nav_tier2_panel_alumnos",
+      "parentId": "wd_nav_tier2_panel_evaluaciones",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "rightColumn": 224,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "wd_nav_tier2_canvas_alumnos",
-      "widgetName": "Canvas_nav_tier2_Alumnos"
+      "widgetId": "wd_nav_tier2_canvas_evaluaciones",
+      "widgetName": "Canvas_nav_tier2_Evaluaciones"
     }
   ],
   "containerStyle": "card",
@@ -51,7 +51,7 @@
   "isCanvas": true,
   "isLoading": false,
   "isVisible": "{{!!appsmith.store.activeNavTier}}",
-  "key": "k_nav_tier2_panel_Alumnos",
+  "key": "k_nav_tier2_panel_Evaluaciones",
   "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -69,6 +69,6 @@
   "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "wd_nav_tier2_panel_alumnos",
-  "widgetName": "cnt_nav_tier2_Alumnos"
+  "widgetId": "wd_nav_tier2_panel_evaluaciones",
+  "widgetName": "cnt_nav_tier2_Evaluaciones"
 }

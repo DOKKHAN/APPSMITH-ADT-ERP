@@ -24,19 +24,19 @@
       "hideCard": true,
       "isLoading": false,
       "isVisible": true,
-      "key": "k_wd_nav_tier2_canvas_homev2",
+      "key": "k_wd_nav_tier2_canvas_rutinas",
       "leftColumn": 0,
       "minHeight": 1250,
       "parentColumnSpace": 1,
-      "parentId": "wd_nav_tier2_panel_homev2",
+      "parentId": "wd_nav_tier2_panel_rutinas",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "rightColumn": 224,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "wd_nav_tier2_canvas_homev2",
-      "widgetName": "Canvas_nav_tier2_Home_V2"
+      "widgetId": "wd_nav_tier2_canvas_rutinas",
+      "widgetName": "Canvas_nav_tier2_Rutinas"
     }
   ],
   "containerStyle": "card",
@@ -51,7 +51,7 @@
   "isCanvas": true,
   "isLoading": false,
   "isVisible": "{{!!appsmith.store.activeNavTier}}",
-  "key": "k_nav_tier2_panel_Home_V2",
+  "key": "k_nav_tier2_panel_Rutinas",
   "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -69,6 +69,6 @@
   "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "wd_nav_tier2_panel_homev2",
-  "widgetName": "cnt_nav_tier2_Home_V2"
+  "widgetId": "wd_nav_tier2_panel_rutinas",
+  "widgetName": "cnt_nav_tier2_Rutinas"
 }
