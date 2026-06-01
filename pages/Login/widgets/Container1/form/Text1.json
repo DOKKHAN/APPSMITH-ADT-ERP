@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 12,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -15,7 +15,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "vp16r8wuhh",
-  "leftColumn": 30,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -24,11 +24,11 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 15,
-  "originalTopRow": 8,
+  "originalBottomRow": 8,
+  "originalTopRow": 1,
   "overflow": "NONE",
   "parentColumnSpace": 6.4140625,
-  "parentId": "8x1wv46n91",
+  "parentId": "uo91iz07sn",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -37,7 +37,7 @@
   "text": "Bienvenido a A Darlo Todo",
   "textAlign": "CENTER",
   "textColor": "#ffffff",
-  "topRow": 13,
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

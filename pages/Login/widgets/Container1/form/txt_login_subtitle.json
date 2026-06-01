@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 17,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -15,7 +15,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "loginsubtitle01",
-  "leftColumn": 30,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -24,16 +24,16 @@
   "originalTopRow": 12,
   "overflow": "NONE",
   "parentColumnSpace": 16.71875,
-  "parentId": "8x1wv46n91",
+  "parentId": "uo91iz07sn",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "shouldTruncate": false,
   "text": "Accede al ERP operativo del gimnasio para gestionar alumnos, evaluaciones y rutinas.",
   "textAlign": "CENTER",
   "textColor": "#61a2d8",
-  "topRow": 17,
+  "topRow": 12,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
