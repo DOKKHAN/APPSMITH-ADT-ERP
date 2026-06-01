@@ -18,7 +18,7 @@
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": false,
+  "isVisible": true,
   "key": "loginquote01",
   "leftColumn": 3,
   "maxDynamicHeight": 9000,
