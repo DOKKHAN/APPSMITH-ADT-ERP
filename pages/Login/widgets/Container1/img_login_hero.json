@@ -6,6 +6,11 @@
   "defaultImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80",
   "displayName": "Image",
   "dynamicBindingPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "enableDownload": false,
   "enableRotation": false,
@@ -23,7 +28,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
+  "rightColumn": 29,
   "topRow": 0,
   "type": "IMAGE_WIDGET",
   "version": 1,
