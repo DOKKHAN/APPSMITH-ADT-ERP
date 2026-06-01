@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 16,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -13,28 +13,28 @@
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": false,
-  "key": "loginbrand01",
-  "leftColumn": 3,
+  "isVisible": true,
+  "key": "loginbrandexternal01",
+  "leftColumn": 12,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 16.71875,
-  "parentId": "8x1wv46n91",
+  "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 27,
+  "rightColumn": 29,
   "shouldTruncate": false,
   "text": "A DARLO TODO",
   "textAlign": "LEFT",
   "textColor": "#FFFFFF",
-  "topRow": 3,
+  "topRow": 14,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "loginbrandtxt1",
-  "widgetName": "txt_login_brand"
+  "widgetId": "loginbrandexternal1",
+  "widgetName": "txt_login_brand_frame"
 }
