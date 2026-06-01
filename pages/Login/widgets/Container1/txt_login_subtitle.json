@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 22,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -33,7 +33,7 @@
   "text": "Accede al ERP operativo del gimnasio para gestionar alumnos, evaluaciones y rutinas.",
   "textAlign": "CENTER",
   "textColor": "#61a2d8",
-  "topRow": 12,
+  "topRow": 17,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
