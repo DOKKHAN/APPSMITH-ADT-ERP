@@ -1093,7 +1093,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{Array.isArray(get_student_routine.data) ? get_student_routine.data : []}}",
+  "tableData": "{{get_student_routine.data || []}}",
   "textSize": "0.875rem",
   "topRow": 26,
   "totalRecordsCount": 0,
