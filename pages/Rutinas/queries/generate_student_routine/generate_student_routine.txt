@@ -1,0 +1,13 @@
+{{(() => {
+  const idAlumno = Number(sel_routine_student.selectedOptionValue);
+  const student = (get_students_lookup.data || []).find((row) => Number(row.id_alumno || row.value) === idAlumno) || {};
+  const noneToNull = (value) => ['__none__', 'null', 'ninguno', 'ninguna', ''].includes(String(value ?? '').trim().toLowerCase()) ? null : value;
+  return JSON.stringify({
+    id_alumno: idAlumno,
+    objetivo: noneToNull(student.objetivo),
+    prioridad_recomposicion: String(student.objetivo || '').toLowerCase().includes('recompos') ? noneToNull(student.prioridad_recomposicion) : null,
+    enfoque_principal: noneToNull(student.enfoque_principal),
+    enfoque_especifico: noneToNull(student.enfoque_especifico),
+    debilidad: noneToNull(student.debilidad)
+  });
+})()}}

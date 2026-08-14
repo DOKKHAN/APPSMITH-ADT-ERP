@@ -3,8 +3,14 @@ SELECT
   nombre_completo || ' (' || COALESCE(NULLIF(rut, ''), 'Sin RUT') || ')' AS label,
   id_alumno,
   nombre_completo,
-  COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut
+  COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut,
+  frecuencia_semanal,
+  objetivo,
+  prioridad_recomposicion,
+  enfoque_principal,
+  enfoque_especifico,
+  debilidad
 FROM adt.alumnos
-WHERE estado_activo = TRUE
-  AND evaluacion_inicial = TRUE
+WHERE estado_activo IS TRUE
+  AND evaluacion_inicial IS TRUE
 ORDER BY nombre_completo ASC;

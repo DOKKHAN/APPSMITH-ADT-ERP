@@ -1,18 +1,14 @@
 {
-  "gitSyncId": "69b8602109cfa130e9690df8_c9a6757e-3d68-4495-b861-4edecfdc4aac",
+  "gitSyncId": "69b8602109cfa130e9690df8_18c29fb3-dc4a-4e7c-a64a-3e5ec2ff4748",
   "id": "Rutinas_get_students_lookup",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  id_alumno AS value,\n  nombre_completo || ' (' || COALESCE(NULLIF(rut, ''), 'Sin RUT') || ')' AS label,\n  id_alumno,\n  nombre_completo,\n  COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut\nFROM adt.alumnos\nWHERE estado_activo = TRUE\n  AND evaluacion_inicial = TRUE\nORDER BY nombre_completo ASC;\n",
+      "body": "SELECT\n  id_alumno AS value,\n  nombre_completo || ' (' || COALESCE(NULLIF(rut, ''), 'Sin RUT') || ')' AS label,\n  id_alumno,\n  nombre_completo,\n  COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut,\n  frecuencia_semanal,\n  objetivo,\n  prioridad_recomposicion,\n  enfoque_principal,\n  enfoque_especifico,\n  debilidad\nFROM adt.alumnos\nWHERE estado_activo IS TRUE\n  AND evaluacion_inicial IS TRUE\nORDER BY nombre_completo ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
-      "pluginSpecifiedTemplates": [
-        {
-          "value": true
-        }
-      ],
+      "pluginSpecifiedTemplates": [{ "value": true }],
       "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
@@ -26,6 +22,6 @@
     "name": "get_students_lookup",
     "pageId": "Rutinas",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }
