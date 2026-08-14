@@ -49,7 +49,7 @@
   "placeholderText": "Buscar por nombre o RUT",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 49,
+  "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "{{(() => { const rows = (get_pending_students_lookup.data && get_pending_students_lookup.data.length ? get_pending_students_lookup.data : (appsmith.store.evaluaciones_student_options || get_pending_initial_evaluations.data || [])); if (!rows.length && appsmith.store.evaluaciones_loading) return [{ label: 'Cargando alumnos...', value: '__loading__' }]; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin alumnos cargados', value: '__empty__' }]; })()}}",
   "topRow": 13,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 71,
+  "bottomRow": 69,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -30,10 +30,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 25,
   "shouldTruncate": false,
-  "text": "Ejercicio 3",
-  "textAlign": "LEFT",
+  "text": "3",
+  "textAlign": "CENTER",
   "textColor": "#F9FAFB",
-  "topRow": 67,
+  "topRow": 65,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
