@@ -8,7 +8,11 @@
       "body": "WITH active_macro AS (\n  SELECT mc.id_macrociclo\n  FROM adt.macrociclos mc\n  WHERE mc.id_alumno = {{Number(sel_routine_student.selectedOptionValue) || 0}}\n    AND mc.esta_activo IS TRUE\n  ORDER BY mc.fecha_inicio DESC NULLS LAST, mc.id_macrociclo DESC\n  LIMIT 1\n),\nactive_meso AS (\n  SELECT meso.id_mesociclo, meso.fase_tipo\n  FROM adt.mesociclos meso\n  JOIN active_macro mc ON mc.id_macrociclo = meso.id_macrociclo\n  WHERE meso.esta_activo IS TRUE\n  ORDER BY meso.fecha_inicio DESC NULLS LAST, meso.id_mesociclo DESC\n  LIMIT 1\n)\nSELECT\n  a.rut,\n  mc.id_macrociclo,\n  meso.id_mesociclo,\n  b.id_bloque,\n  b.semana_meso AS semana,\n  b.dia_numero AS dia,\n  b.dia_tipo,\n  b.orden,\n  COALESCE(e.nombre, 'Ejercicio #' || b.id_ejercicio::text) AS ejercicio,\n  b.series AS series_plan,\n  CASE\n    WHEN b.reps_min IS NULL AND b.reps_max IS NULL THEN NULL\n    WHEN b.reps_min = b.reps_max THEN b.reps_min::text\n    ELSE COALESCE(b.reps_min::text, '?') || ' - ' || COALESCE(b.reps_max::text, '?')\n  END AS repeticiones_plan,\n  COALESCE(\n    CASE\n      WHEN b.rir_objetivo_min IS NOT NULL AND b.rir_objetivo_max IS NOT NULL\n        THEN b.rir_objetivo_min::text || ' - ' || b.rir_objetivo_max::text\n    END,\n    b.rir_objetivo::text\n  ) AS rir_plan,\n  b.peso_sugerido_inicial AS peso_sugerido,\n  ultimo_log.peso_utilizado AS peso_realizado,\n  ultimo_log.series_realizadas,\n  ultimo_log.reps_promedio,\n  ultimo_log.rir_reportado,\n  ultimo_log.rpe_reportado,\n  ultimo_log.fecha_realizada AS ultima_ejecucion,\n  e.patron_movimiento,\n  e.maquina,\n  b.objetivo_muscular,\n  e.es_primario,\n  e.es_secundario,\n  e.es_terciario,\n  e.grupo_muscular_primario,\n  e.grupo_muscular_secundario,\n  e.grupo_muscular_terciario\nFROM adt.alumnos a\nJOIN active_macro mc ON TRUE\nJOIN active_meso meso ON TRUE\nJOIN adt.bloques_ejercicios b ON b.id_mesociclo = meso.id_mesociclo\nLEFT JOIN adt.ejercicios e ON e.id_ejercicio = b.id_ejercicio\nLEFT JOIN LATERAL (\n  SELECT\n    le.peso_utilizado,\n    le.series_realizadas,\n    le.reps_promedio,\n    le.rir_reportado,\n    le.rpe_reportado,\n    le.fecha_realizada\n  FROM adt.log_entrenamiento le\n  WHERE le.id_bloque = b.id_bloque\n  ORDER BY le.fecha_realizada DESC, le.id_log DESC\n  LIMIT 1\n) ultimo_log ON TRUE\nWHERE a.id_alumno = {{Number(sel_routine_student.selectedOptionValue) || 0}}\nORDER BY b.semana_meso, b.dia_numero, b.orden;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
-      "pluginSpecifiedTemplates": [{ "value": true }],
+      "pluginSpecifiedTemplates": [
+        {
+          "value": true
+        }
+      ],
       "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
@@ -18,10 +22,14 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [{ "key": "body" }],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "get_student_routine",
     "pageId": "Rutinas",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
