@@ -21,7 +21,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": false,
   "key": "k_nav_admin_item_Alumnos",
   "leftColumn": 6,
   "minWidth": 40,

@@ -46,7 +46,7 @@
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": false,
   "key": "k_nav_tier1_panel_Rutinas",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,

@@ -48,7 +48,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "k_nav_tier2_panel_Evaluaciones",
-  "leftColumn": 6,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 40,

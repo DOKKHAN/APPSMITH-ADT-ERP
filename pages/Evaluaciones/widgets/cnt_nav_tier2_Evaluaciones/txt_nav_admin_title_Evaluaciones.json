@@ -19,7 +19,7 @@
   "fontSize": "1.35rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{(appsmith.store.activeNavTier || 'training') === 'admin'}}",
+  "isVisible": false,
   "key": "k_nav_admin_title_Evaluaciones",
   "leftColumn": 6,
   "maxDynamicHeight": 9000,

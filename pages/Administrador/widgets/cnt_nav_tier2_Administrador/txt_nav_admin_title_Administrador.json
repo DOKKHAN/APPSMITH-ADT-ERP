@@ -9,7 +9,7 @@
   "dynamicTriggerPathList": [],
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{(appsmith.store.activeNavTier || 'admin') === 'admin'}}",
+  "isVisible": false,
   "key": "k_nav_admin_title_Administrador",
   "leftColumn": 6,
   "minWidth": 40,
