@@ -28,7 +28,7 @@ SELECT
   CASE
     WHEN b.reps_min IS NULL AND b.reps_max IS NULL THEN NULL
     WHEN b.reps_min = b.reps_max THEN b.reps_min::text
-    ELSE COALESCE(b.reps_min::text, '?') || ' - ' || COALESCE(b.reps_max::text, '?')
+    ELSE COALESCE(b.reps_min::text, 'N/D') || ' - ' || COALESCE(b.reps_max::text, 'N/D')
   END AS repeticiones_plan,
   COALESCE(
     CASE
