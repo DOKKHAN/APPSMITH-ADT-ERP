@@ -54,6 +54,10 @@
       "isDefault": false
     },
     {
+      "id": "Test microciclos",
+      "isDefault": false
+    },
+    {
       "id": "Administrador",
       "isDefault": false
     }

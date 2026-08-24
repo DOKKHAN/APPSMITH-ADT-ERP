@@ -1,0 +1,34 @@
+{
+  "gitSyncId": "69b8602109cfa130e9690df8_2d2a79cf-4586-4f8e-ae7e-7689c1f7a101",
+  "unpublishedPage": {
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "#0B111D",
+          "bottomRow": 1250,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "minHeight": 1250,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "positioning": "fixed",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 125,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 94,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Test microciclos",
+    "slug": "test-microciclos",
+    "uniqueSlug": "test-microciclos"
+  }
+}

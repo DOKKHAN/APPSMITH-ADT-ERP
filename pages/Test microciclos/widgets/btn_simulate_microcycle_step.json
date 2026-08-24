@@ -1,0 +1,51 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "buttonColor": "#7C3AED",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isLoading"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "refresh-cw",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{!sel_test_student.selectedOptionValue || sel_test_student.selectedOptionValue === '__empty__' || !sel_test_microcycle.selectedOptionValue || sel_test_microcycle.selectedOptionValue === '__empty__' || !(get_test_microcycle_exercises.data || []).length}}",
+  "isLoading": "{{simulate_microcycles.isLoading}}",
+  "isVisible": true,
+  "key": "k_btn_simulate_microcycle_step",
+  "leftColumn": 56,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onClick": "{{simulate_microcycles.run().then((response) => storeValue('test_microcycle_result', { id_alumno: Number(sel_test_student.selectedOptionValue), microciclo: Number(sel_test_microcycle.selectedOptionValue), data: response })).then(() => showAlert('Simulación de microciclo completada en dry-run', 'success')).catch((error) => showAlert('Error simulando microciclo: ' + error.message, 'error'));}}",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "text": "Simular paso de microciclo",
+  "topRow": 13,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "w_btn_simulate_microcycle_step",
+  "widgetName": "btn_simulate_microcycle_step"
+}

@@ -6,9 +6,7 @@ INSERT INTO adt.log_entrenamiento (
   iso_semana,
   series_realizadas,
   peso_utilizado,
-  reps_promedio,
-  rir_reportado,
-  rpe_reportado
+  reps_promedio
 )
 SELECT
   b.id_bloque,
@@ -18,9 +16,7 @@ SELECT
   EXTRACT(WEEK FROM CURRENT_DATE)::integer,
   {{tbl_routine_exercises.updatedRow.series_realizadas === '' || tbl_routine_exercises.updatedRow.series_realizadas == null ? null : Number(tbl_routine_exercises.updatedRow.series_realizadas)}},
   {{tbl_routine_exercises.updatedRow.peso_realizado === '' || tbl_routine_exercises.updatedRow.peso_realizado == null ? null : Number(tbl_routine_exercises.updatedRow.peso_realizado)}},
-  {{tbl_routine_exercises.updatedRow.reps_promedio === '' || tbl_routine_exercises.updatedRow.reps_promedio == null ? null : Number(tbl_routine_exercises.updatedRow.reps_promedio)}},
-  {{tbl_routine_exercises.updatedRow.rir_reportado === '' || tbl_routine_exercises.updatedRow.rir_reportado == null ? null : Number(tbl_routine_exercises.updatedRow.rir_reportado)}},
-  {{tbl_routine_exercises.updatedRow.rpe_reportado === '' || tbl_routine_exercises.updatedRow.rpe_reportado == null ? null : Number(tbl_routine_exercises.updatedRow.rpe_reportado)}}
+  {{tbl_routine_exercises.updatedRow.reps_promedio === '' || tbl_routine_exercises.updatedRow.reps_promedio == null ? null : Number(tbl_routine_exercises.updatedRow.reps_promedio)}}
 FROM adt.bloques_ejercicios b
 JOIN adt.mesociclos meso ON meso.id_mesociclo = b.id_mesociclo
 JOIN adt.macrociclos mc ON mc.id_macrociclo = meso.id_macrociclo
@@ -32,6 +28,4 @@ WHERE b.id_bloque = {{Number(tbl_routine_exercises.updatedRow.id_bloque) || 0}}
   AND {{Number(tbl_routine_exercises.updatedRow.peso_realizado)}} BETWEEN 0 AND 1000
   AND ({{tbl_routine_exercises.updatedRow.series_realizadas === '' || tbl_routine_exercises.updatedRow.series_realizadas == null ? null : Number(tbl_routine_exercises.updatedRow.series_realizadas)}} IS NULL OR {{Number(tbl_routine_exercises.updatedRow.series_realizadas)}} BETWEEN 1 AND 20)
   AND ({{tbl_routine_exercises.updatedRow.reps_promedio === '' || tbl_routine_exercises.updatedRow.reps_promedio == null ? null : Number(tbl_routine_exercises.updatedRow.reps_promedio)}} IS NULL OR {{Number(tbl_routine_exercises.updatedRow.reps_promedio)}} BETWEEN 0 AND 1000)
-  AND ({{tbl_routine_exercises.updatedRow.rir_reportado === '' || tbl_routine_exercises.updatedRow.rir_reportado == null ? null : Number(tbl_routine_exercises.updatedRow.rir_reportado)}} IS NULL OR {{Number(tbl_routine_exercises.updatedRow.rir_reportado)}} BETWEEN 0 AND 10)
-  AND ({{tbl_routine_exercises.updatedRow.rpe_reportado === '' || tbl_routine_exercises.updatedRow.rpe_reportado == null ? null : Number(tbl_routine_exercises.updatedRow.rpe_reportado)}} IS NULL OR {{Number(tbl_routine_exercises.updatedRow.rpe_reportado)}} BETWEEN 0 AND 10)
 RETURNING id_log, id_bloque, fecha_realizada, peso_utilizado;

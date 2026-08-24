@@ -1,8 +1,0 @@
-{{JSON.stringify({
-  fecha_proceso: moment().format('YYYY-MM-DD'),
-  dias_a_sumar: 1,
-  id_alumno: Number(sel_routine_student.selectedOptionValue),
-  id_mesociclo: get_student_routine.data?.[0]?.id_mesociclo ? Number(get_student_routine.data[0].id_mesociclo) : null,
-  forzar_recalculo: true,
-  dry_run: true
-})}}
