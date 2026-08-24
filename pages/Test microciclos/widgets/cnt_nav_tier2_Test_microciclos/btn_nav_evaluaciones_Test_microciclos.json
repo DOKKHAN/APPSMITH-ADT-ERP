@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "10px",
-  "bottomRow": 29,
+  "bottomRow": 24,
   "boxShadow": "none",
   "buttonColor": "#111827",
   "buttonVariant": "PRIMARY",
@@ -37,7 +37,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 58,
   "text": "Evaluaciones",
-  "topRow": 24,
+  "topRow": 19,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "w_btn_nav_evaluaciones_Test_microciclos",

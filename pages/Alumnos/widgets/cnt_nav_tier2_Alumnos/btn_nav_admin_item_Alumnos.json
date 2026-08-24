@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "10px",
-  "bottomRow": 38,
+  "bottomRow": 45,
   "boxShadow": "none",
   "buttonColor": "#111827",
   "buttonVariant": "PRIMARY",
@@ -37,7 +37,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 58,
   "text": "Administrador",
-  "topRow": 33,
+  "topRow": 40,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "wd_nav_admin_item_alumnos",

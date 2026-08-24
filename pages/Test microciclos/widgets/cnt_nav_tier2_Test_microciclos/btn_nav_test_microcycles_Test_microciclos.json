@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "borderRadius": "10px",
+  "bottomRow": 38,
   "boxShadow": "none",
-  "buttonColor": "#7C3AED",
+  "buttonColor": "#1F2937",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -22,24 +22,26 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "k_open_test_microcycles",
-  "leftColumn": 55,
-  "minWidth": 120,
+  "key": "k_nav_test_microcycles_Test_microciclos",
+  "leftColumn": 6,
+  "minWidth": 40,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('Test microciclos');}}",
   "parentColumnSpace": 16,
-  "parentId": "0",
+  "parentId": "wd_nav_tier2_canvas_test_microciclos",
   "parentRowSpace": 10,
-  "placement": "CENTER",
+  "placement": "START",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 58,
   "text": "Test microciclos",
-  "topRow": 13,
+  "topRow": 33,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "w_test_microcycles_link",
-  "widgetName": "btn_open_test_microcycles"
+  "widgetId": "wd_nav_test_microcycles_test_microciclos",
+  "widgetName": "btn_nav_test_microcycles_Test_microciclos",
+  "fontSize": "1rem",
+  "textColor": "#F9FAFB"
 }

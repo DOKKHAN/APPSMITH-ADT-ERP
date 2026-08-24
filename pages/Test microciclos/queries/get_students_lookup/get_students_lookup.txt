@@ -1,6 +1,6 @@
 SELECT
   id_alumno AS value,
-  nombre_completo || ' (' || COALESCE(NULLIF(rut, ''), 'Sin RUT') || ')' AS label,
+  COALESCE(NULLIF(rut, ''), 'Sin RUT') || ' - ' || nombre_completo AS label,
   id_alumno,
   nombre_completo,
   COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut,
@@ -13,4 +13,4 @@ SELECT
 FROM adt.alumnos
 WHERE estado_activo IS TRUE
   AND evaluacion_inicial IS TRUE
-ORDER BY nombre_completo ASC;
+ORDER BY rut ASC, nombre_completo ASC;
