@@ -25,7 +25,16 @@
     "rir_objetivo_max"
   ],
   "columnUpdatedAt": 1786717182382,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "dia_numero": 72,
+    "ejercicio": 280,
+    "repeticiones": 115,
+    "series": 80,
+    "rir_objetivo": 110,
+    "reps_promedio": 135,
+    "estado_microciclo": 165,
+    "comentario_semanal": 360
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -158,13 +167,13 @@
       "id": "orden",
       "index": 1,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": false,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Orden",
       "notation": "standard",
       "originalId": "orden",
@@ -359,11 +368,11 @@
       "thousandSeparator": false,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 150
+      "width": 165
     },
     "comentario_semanal": {
       "alias": "comentario_semanal",
-      "allowCellWrapping": true,
+      "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{(Array.isArray(tbl_test_microcycle_exercises.processedTableData) ? tbl_test_microcycle_exercises.processedTableData : []).map((currentRow) => currentRow[\"comentario_semanal\"])}}",
@@ -382,7 +391,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Comentario semanal",
+      "label": "Comentario",
       "notation": "standard",
       "originalId": "comentario_semanal",
       "sticky": "",
@@ -390,7 +399,7 @@
       "thousandSeparator": false,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 280
+      "width": 360
     },
     "id_bloque": {
       "alias": "id_bloque",

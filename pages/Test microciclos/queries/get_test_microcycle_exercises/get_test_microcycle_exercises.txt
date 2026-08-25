@@ -11,7 +11,11 @@ SELECT
   b.rir_objetivo_max,
   CONCAT(b.rir_objetivo_min, ' - ', b.rir_objetivo_max) AS rir_objetivo,
   b.estado_microciclo,
-  b.comentario_semanal,
+  CASE
+    WHEN b.comentario_semanal IS NULL THEN NULL
+    WHEN LENGTH(b.comentario_semanal) > 80 THEN LEFT(b.comentario_semanal, 77) || '...'
+    ELSE b.comentario_semanal
+  END AS comentario_semanal,
   NULL::numeric AS reps_promedio
 FROM adt.bloques_ejercicios b
 JOIN adt.ejercicios e ON e.id_ejercicio = b.id_ejercicio
