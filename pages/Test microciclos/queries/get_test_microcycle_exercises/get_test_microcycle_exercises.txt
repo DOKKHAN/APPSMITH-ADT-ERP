@@ -1,52 +1,20 @@
-WITH active_macro AS (
-  SELECT mc.id_macrociclo
-  FROM adt.macrociclos mc
-  WHERE mc.id_alumno = {{Number(sel_test_student.selectedOptionValue) || 0}}
-    AND mc.esta_activo IS TRUE
-  ORDER BY mc.fecha_inicio DESC NULLS LAST, mc.id_macrociclo DESC
-  LIMIT 1
-),
-active_meso AS (
-  SELECT meso.id_mesociclo
-  FROM adt.mesociclos meso
-  JOIN active_macro mc ON mc.id_macrociclo = meso.id_macrociclo
-  WHERE meso.esta_activo IS TRUE
-  ORDER BY meso.fecha_inicio DESC NULLS LAST, meso.id_mesociclo DESC
-  LIMIT 1
-)
 SELECT
-  a.rut,
-  meso.id_mesociclo,
   b.id_bloque,
-  b.semana_meso AS microciclo,
-  b.dia_numero AS dia,
+  b.id_mesociclo,
+  b.semana_meso,
+  b.dia_numero,
   b.orden,
-  COALESCE(e.nombre, 'Ejercicio #' || b.id_ejercicio::text) AS ejercicio,
-  CASE
-    WHEN b.reps_min IS NULL AND b.reps_max IS NULL THEN NULL
-    WHEN b.reps_min = b.reps_max THEN b.reps_min::text
-    ELSE COALESCE(b.reps_min::text, 'N/D') || ' - ' || COALESCE(b.reps_max::text, 'N/D')
-  END AS repeticiones_plan,
-  b.series AS series_plan,
-  COALESCE(
-    CASE
-      WHEN b.rir_objetivo_min IS NOT NULL AND b.rir_objetivo_max IS NOT NULL
-        THEN b.rir_objetivo_min::text || ' - ' || b.rir_objetivo_max::text
-    END,
-    b.rir_objetivo::text
-  ) AS rir_plan,
-  ultimo_log.reps_promedio
-FROM adt.alumnos a
-JOIN active_meso meso ON TRUE
-JOIN adt.bloques_ejercicios b ON b.id_mesociclo = meso.id_mesociclo
-LEFT JOIN adt.ejercicios e ON e.id_ejercicio = b.id_ejercicio
-LEFT JOIN LATERAL (
-  SELECT le.reps_promedio
-  FROM adt.log_entrenamiento le
-  WHERE le.id_bloque = b.id_bloque
-  ORDER BY le.fecha_realizada DESC, le.id_log DESC
-  LIMIT 1
-) ultimo_log ON TRUE
-WHERE a.id_alumno = {{Number(sel_test_student.selectedOptionValue) || 0}}
-  AND b.semana_meso = {{Number(sel_test_microcycle.selectedOptionValue) || 0}}
+  e.nombre AS ejercicio,
+  CONCAT(b.reps_min, ' - ', b.reps_max) AS repeticiones,
+  b.series,
+  b.rir_objetivo_min,
+  b.rir_objetivo_max,
+  CONCAT(b.rir_objetivo_min, ' - ', b.rir_objetivo_max) AS rir_objetivo,
+  b.estado_microciclo,
+  b.comentario_semanal,
+  NULL::numeric AS reps_promedio
+FROM adt.bloques_ejercicios b
+JOIN adt.ejercicios e ON e.id_ejercicio = b.id_ejercicio
+WHERE b.id_mesociclo = {{Number(sel_test_microcycle.selectedOptionValue) || 0}}
+  AND b.semana_meso = {{Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1)}}
 ORDER BY b.dia_numero, b.orden;

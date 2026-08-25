@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{{JSON.stringify({\n  fecha_proceso: moment().format('YYYY-MM-DD'),\n  dias_a_sumar: 1,\n  id_alumno: Number(sel_test_student.selectedOptionValue),\n  id_mesociclo: ((get_microcycle_options.data || []).find((row) => String(row.value) === String(sel_test_microcycle.selectedOptionValue)) || {}).id_mesociclo || null,\n  semana_meso: Number(sel_test_microcycle.selectedOptionValue),\n  forzar_recalculo: true,\n  dry_run: true,\n  registros_microciclo: ((tbl_test_microcycle_exercises.processedTableData || get_test_microcycle_exercises.data || [])).map((row) => ({\n    id_bloque: Number(row.id_bloque),\n    ejercicio: row.ejercicio,\n    reps_promedio: row.reps_promedio === '' || row.reps_promedio == null ? null : Number(row.reps_promedio)\n  })).filter((row) => row.id_bloque && row.reps_promedio != null)\n})}}\n",
+      "body": "{{JSON.stringify({\n  id_alumno: Number(sel_test_student.selectedOptionValue),\n  id_mesociclo: Number(sel_test_microcycle.selectedOptionValue),\n  fecha_proceso: moment().format('YYYY-MM-DD'),\n  forzar_recalculo: true,\n  dry_run: false\n})}}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

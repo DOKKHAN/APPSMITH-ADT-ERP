@@ -1,14 +1,7 @@
 {{JSON.stringify({
-  fecha_proceso: moment().format('YYYY-MM-DD'),
-  dias_a_sumar: 1,
   id_alumno: Number(sel_test_student.selectedOptionValue),
-  id_mesociclo: ((get_microcycle_options.data || []).find((row) => String(row.value) === String(sel_test_microcycle.selectedOptionValue)) || {}).id_mesociclo || null,
-  semana_meso: Number(sel_test_microcycle.selectedOptionValue),
+  id_mesociclo: Number(sel_test_microcycle.selectedOptionValue),
+  fecha_proceso: moment().format('YYYY-MM-DD'),
   forzar_recalculo: true,
-  dry_run: true,
-  registros_microciclo: ((tbl_test_microcycle_exercises.processedTableData || get_test_microcycle_exercises.data || [])).map((row) => ({
-    id_bloque: Number(row.id_bloque),
-    ejercicio: row.ejercicio,
-    reps_promedio: row.reps_promedio === '' || row.reps_promedio == null ? null : Number(row.reps_promedio)
-  })).filter((row) => row.id_bloque && row.reps_promedio != null)
+  dry_run: false
 })}}

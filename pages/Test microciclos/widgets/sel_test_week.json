@@ -1,0 +1,84 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{appsmith.store.test_microcycle_selected_week || 1}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": "{{!sel_test_microcycle.selectedOptionValue || sel_test_microcycle.selectedOptionValue === '__empty__'}}",
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "k_sel_test_week",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Semana",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 50,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{storeValue('test_microcycle_selected_week', Number(sel_test_week.selectedOptionValue || 1)).then(() => get_test_microcycle_exercises.run());}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Semana",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 56,
+  "serverSideFiltering": false,
+  "sourceData": [
+    {
+      "label": "Semana 1",
+      "value": 1
+    },
+    {
+      "label": "Semana 2",
+      "value": 2
+    },
+    {
+      "label": "Semana 3",
+      "value": 3
+    },
+    {
+      "label": "Semana 4",
+      "value": 4
+    },
+    {
+      "label": "Semana 5",
+      "value": 5
+    },
+    {
+      "label": "Semana 6",
+      "value": 6
+    }
+  ],
+  "topRow": 13,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w_sel_test_week",
+  "widgetName": "sel_test_week"
+}

@@ -1,0 +1,46 @@
+WITH input_rows AS (
+  SELECT *
+  FROM jsonb_to_recordset({{JSON.stringify((tbl_test_microcycle_exercises.updatedRows || []).filter((row) => row.reps_promedio !== '' && row.reps_promedio != null && !Number.isNaN(Number(row.reps_promedio))))}}::jsonb) AS x(
+    id_bloque int,
+    semana_meso int,
+    series int,
+    reps_promedio numeric,
+    rir_objetivo_max int
+  )
+  WHERE x.reps_promedio IS NOT NULL
+), limpiar AS (
+  DELETE FROM adt.log_entrenamiento l
+  USING input_rows i
+  WHERE l.id_bloque = i.id_bloque
+    AND l.semana_del_meso = i.semana_meso
+    AND l.comentario_alumno = 'Prueba Appsmith microciclo'
+)
+INSERT INTO adt.log_entrenamiento (
+  id_bloque,
+  semana_del_meso,
+  fecha_realizada,
+  iso_year,
+  iso_semana,
+  series_realizadas,
+  peso_utilizado,
+  reps_logradas,
+  reps_promedio,
+  rir_reportado,
+  rpe_reportado,
+  comentario_alumno
+)
+SELECT
+  i.id_bloque,
+  i.semana_meso,
+  CURRENT_TIMESTAMP,
+  EXTRACT(ISOYEAR FROM CURRENT_DATE)::integer,
+  EXTRACT(WEEK FROM CURRENT_DATE)::integer,
+  i.series,
+  0,
+  i.reps_promedio,
+  i.reps_promedio,
+  i.rir_objetivo_max,
+  7,
+  'Prueba Appsmith microciclo'
+FROM input_rows i
+RETURNING id_log, id_bloque, semana_del_meso, reps_promedio;

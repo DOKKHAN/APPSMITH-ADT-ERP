@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "WITH active_macro AS (\n  SELECT mc.id_macrociclo\n  FROM adt.macrociclos mc\n  WHERE mc.id_alumno = {{Number(sel_test_student.selectedOptionValue) || 0}}\n    AND mc.esta_activo IS TRUE\n  ORDER BY mc.fecha_inicio DESC NULLS LAST, mc.id_macrociclo DESC\n  LIMIT 1\n),\nactive_meso AS (\n  SELECT meso.id_mesociclo\n  FROM adt.mesociclos meso\n  JOIN active_macro mc ON mc.id_macrociclo = meso.id_macrociclo\n  WHERE meso.esta_activo IS TRUE\n  ORDER BY meso.fecha_inicio DESC NULLS LAST, meso.id_mesociclo DESC\n  LIMIT 1\n)\nSELECT\n  b.semana_meso AS value,\n  'Microciclo ' || b.semana_meso::text || ' (' || COUNT(*)::text || ' ejercicios)' AS label,\n  b.semana_meso,\n  meso.id_mesociclo\nFROM active_meso meso\nJOIN adt.bloques_ejercicios b ON b.id_mesociclo = meso.id_mesociclo\nGROUP BY b.semana_meso, meso.id_mesociclo\nORDER BY b.semana_meso;\n",
+      "body": "WITH active_macro AS (\n  SELECT mc.id_macrociclo\n  FROM adt.macrociclos mc\n  WHERE mc.id_alumno = {{Number(sel_test_student.selectedOptionValue) || 0}}\n    AND mc.esta_activo IS TRUE\n  ORDER BY mc.fecha_inicio DESC NULLS LAST, mc.id_macrociclo DESC\n  LIMIT 1\n)\nSELECT\n  meso.id_mesociclo AS value,\n  'Mesociclo ' || meso.id_mesociclo::text ||\n    CASE WHEN meso.esta_activo IS TRUE THEN ' (activo)' ELSE '' END AS label,\n  meso.id_mesociclo,\n  meso.fase_tipo,\n  meso.esta_activo,\n  meso.fecha_inicio\nFROM adt.mesociclos meso\nJOIN active_macro mc ON mc.id_macrociclo = meso.id_macrociclo\nORDER BY meso.esta_activo DESC, meso.fecha_inicio DESC NULLS LAST, meso.id_mesociclo DESC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

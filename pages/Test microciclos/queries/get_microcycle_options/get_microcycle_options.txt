@@ -5,21 +5,15 @@ WITH active_macro AS (
     AND mc.esta_activo IS TRUE
   ORDER BY mc.fecha_inicio DESC NULLS LAST, mc.id_macrociclo DESC
   LIMIT 1
-),
-active_meso AS (
-  SELECT meso.id_mesociclo
-  FROM adt.mesociclos meso
-  JOIN active_macro mc ON mc.id_macrociclo = meso.id_macrociclo
-  WHERE meso.esta_activo IS TRUE
-  ORDER BY meso.fecha_inicio DESC NULLS LAST, meso.id_mesociclo DESC
-  LIMIT 1
 )
 SELECT
-  b.semana_meso AS value,
-  'Microciclo ' || b.semana_meso::text || ' (' || COUNT(*)::text || ' ejercicios)' AS label,
-  b.semana_meso,
-  meso.id_mesociclo
-FROM active_meso meso
-JOIN adt.bloques_ejercicios b ON b.id_mesociclo = meso.id_mesociclo
-GROUP BY b.semana_meso, meso.id_mesociclo
-ORDER BY b.semana_meso;
+  meso.id_mesociclo AS value,
+  'Mesociclo ' || meso.id_mesociclo::text ||
+    CASE WHEN meso.esta_activo IS TRUE THEN ' (activo)' ELSE '' END AS label,
+  meso.id_mesociclo,
+  meso.fase_tipo,
+  meso.esta_activo,
+  meso.fecha_inicio
+FROM adt.mesociclos meso
+JOIN active_macro mc ON mc.id_macrociclo = meso.id_macrociclo
+ORDER BY meso.esta_activo DESC, meso.fecha_inicio DESC NULLS LAST, meso.id_mesociclo DESC;
