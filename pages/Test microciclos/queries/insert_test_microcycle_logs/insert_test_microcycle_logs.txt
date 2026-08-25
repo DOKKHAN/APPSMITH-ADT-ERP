@@ -1,6 +1,6 @@
 WITH input_rows AS (
   SELECT *
-  FROM jsonb_to_recordset({{JSON.stringify((tbl_test_microcycle_exercises.updatedRows || []).filter((row) => row.reps_promedio !== '' && row.reps_promedio != null && !Number.isNaN(Number(row.reps_promedio))))}}::jsonb) AS x(
+  FROM jsonb_to_recordset({{JSON.stringify((tbl_test_microcycle_exercises.processedTableData || tbl_test_microcycle_exercises.updatedRows || []).filter((row) => row.reps_promedio !== '' && row.reps_promedio != null && !Number.isNaN(Number(row.reps_promedio))))}}::jsonb) AS x(
     id_bloque int,
     semana_meso int,
     series int,
