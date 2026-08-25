@@ -620,7 +620,7 @@
       "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Peso utilizado",
+      "label": "Peso realizado",
       "notation": "standard",
       "originalId": "peso_utilizado",
       "sticky": "",
