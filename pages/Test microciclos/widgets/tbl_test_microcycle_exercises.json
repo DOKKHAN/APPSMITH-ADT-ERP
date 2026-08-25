@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 94,
+  "bottomRow": 98,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -17,12 +17,13 @@
     "rir_objetivo",
     "reps_promedio",
     "estado_microciclo",
-    "comentario_semanal",
+    "comentario_microciclo",
     "id_bloque",
     "id_mesociclo",
     "semana_meso",
     "rir_objetivo_min",
-    "rir_objetivo_max"
+    "rir_objetivo_max",
+    "actualizado_en"
   ],
   "columnUpdatedAt": 1786717182382,
   "columnWidthMap": {
@@ -33,7 +34,8 @@
     "rir_objetivo": 110,
     "reps_promedio": 135,
     "estado_microciclo": 165,
-    "comentario_semanal": 360
+    "comentario_microciclo": 300,
+    "actualizado_en": 150
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -77,9 +79,6 @@
       "key": "primaryColumns.estado_microciclo.computedValue"
     },
     {
-      "key": "primaryColumns.comentario_semanal.computedValue"
-    },
-    {
       "key": "primaryColumns.id_bloque.computedValue"
     },
     {
@@ -93,6 +92,12 @@
     },
     {
       "key": "primaryColumns.rir_objetivo_max.computedValue"
+    },
+    {
+      "key": "primaryColumns.comentario_microciclo.computedValue"
+    },
+    {
+      "key": "primaryColumns.actualizado_en.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -370,37 +375,6 @@
       "verticalAlignment": "CENTER",
       "width": 165
     },
-    "comentario_semanal": {
-      "alias": "comentario_semanal",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "text",
-      "computedValue": "{{(Array.isArray(tbl_test_microcycle_exercises.processedTableData) ? tbl_test_microcycle_exercises.processedTableData : []).map((currentRow) => currentRow[\"comentario_semanal\"])}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "comentario_semanal",
-      "index": 8,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Comentario",
-      "notation": "standard",
-      "originalId": "comentario_semanal",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": false,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 360
-    },
     "id_bloque": {
       "alias": "id_bloque",
       "allowCellWrapping": false,
@@ -555,6 +529,70 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 100
+    },
+    "comentario_microciclo": {
+      "alias": "comentario_microciclo",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(Array.isArray(tbl_test_microcycle_exercises.processedTableData) ? tbl_test_microcycle_exercises.processedTableData : []).map((currentRow) => currentRow[\"comentario_microciclo\"])}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "comentario_microciclo",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Comentario microciclo",
+      "notation": "standard",
+      "originalId": "comentario_microciclo",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": false,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 300
+    },
+    "actualizado_en": {
+      "alias": "actualizado_en",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "date",
+      "computedValue": "{{(Array.isArray(tbl_test_microcycle_exercises.processedTableData) ? tbl_test_microcycle_exercises.processedTableData : []).map((currentRow) => currentRow[\"actualizado_en\"])}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "actualizado_en",
+      "index": 14,
+      "inputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ",
+      "isCellEditable": false,
+      "isCellVisible": false,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "Actualizado en",
+      "notation": "standard",
+      "originalId": "actualizado_en",
+      "outputFormat": "DD/MM/YYYY HH:mm",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": false,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
@@ -563,7 +601,7 @@
   "searchKey": "",
   "tableData": "{{get_test_microcycle_exercises.data}}",
   "textSize": "0.875rem",
-  "topRow": 32,
+  "topRow": 36,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

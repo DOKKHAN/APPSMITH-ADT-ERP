@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 34,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -33,7 +33,7 @@
   "text": "{{(() => { const id = sel_test_student.selectedOptionValue; if (!id || id === '__empty__') return 'Selecciona un alumno, mesociclo y semana.'; if (get_microcycle_options.isLoading || get_test_microcycle_exercises.isLoading) return 'Cargando bloques del microciclo...'; const rows = get_test_microcycle_exercises.data || []; const edited = (tbl_test_microcycle_exercises.processedTableData || tbl_test_microcycle_exercises.updatedRows || []).filter((row) => row.reps_promedio !== '' && row.reps_promedio != null).length; const base = rows.length ? `${rows.length} bloques cargados para la semana ${sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1}. Filas con reps promedio: ${edited}.` : 'No hay bloques para el mesociclo/semana seleccionados.'; const result = appsmith.store.test_microcycle_result; if (!result || Number(result.id_alumno) !== Number(id) || Number(result.id_mesociclo) !== Number(sel_test_microcycle.selectedOptionValue)) return base; const raw = typeof result.data === 'string' ? result.data : JSON.stringify(result.data); return `${base} Última simulación semana ${result.semana_origen} -> ${result.semana_destino}: ${raw.slice(0, 240)}`; })()}}",
   "textAlign": "LEFT",
   "textColor": "#F9FAFB",
-  "topRow": 26,
+  "topRow": 30,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

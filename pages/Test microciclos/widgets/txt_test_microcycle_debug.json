@@ -31,7 +31,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 49,
   "shouldTruncate": false,
   "text": "{{(() => { if (!sel_test_microcycle.selectedOptionValue || sel_test_microcycle.selectedOptionValue === '__empty__') return 'Selecciona un mesociclo para calcular la fecha simulada.'; const week = Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1); const selectedMeso = sel_test_microcycle.selectedOptionData || (get_microcycle_options.data || []).find((row) => Number(row.value) === Number(sel_test_microcycle.selectedOptionValue)) || {}; const processDate = selectedMeso.fecha_inicio ? moment(selectedMeso.fecha_inicio).add(week - 1, 'weeks').format('YYYY-MM-DD') : 'Sin fecha_inicio'; const transition = week >= 6 ? 'semana 6 -> sin semana 7' : `semana ${week} -> ${week + 1}`; return `Semana seleccionada: ${week} | Fecha proceso simulada: ${processDate} | Transición esperada: ${transition}`; })()}}",
   "textAlign": "LEFT",

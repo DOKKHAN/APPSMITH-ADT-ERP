@@ -2,6 +2,6 @@
   id_alumno: Number(sel_test_student.selectedOptionValue),
   id_mesociclo: Number(sel_test_microcycle.selectedOptionValue),
   fecha_proceso: moment((sel_test_microcycle.selectedOptionData || (get_microcycle_options.data || []).find((row) => Number(row.value) === Number(sel_test_microcycle.selectedOptionValue)) || {}).fecha_inicio).add(Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1) - 1, 'weeks').format('YYYY-MM-DD'),
-  forzar_recalculo: true,
+  forzar_recalculo: Boolean(chk_force_recalculation.isChecked),
   dry_run: false
 })}}
