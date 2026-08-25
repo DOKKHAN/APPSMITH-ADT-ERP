@@ -58,7 +58,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 49,
   "serverSideFiltering": false,
-  "sourceData": "{{(() => { const rows = get_microcycle_options.data || []; return rows.length ? rows.map((row) => ({ label: row.label, value: row.value })) : [{ label: 'Sin mesociclos', value: '__empty__' }]; })()}}",
+  "sourceData": "{{(() => { const rows = get_microcycle_options.data || []; return rows.length ? rows.map((row) => ({ label: row.label, value: row.value, id_mesociclo: row.id_mesociclo, fase_tipo: row.fase_tipo, esta_activo: row.esta_activo, fecha_inicio: row.fecha_inicio })) : [{ label: 'Sin mesociclos', value: '__empty__' }]; })()}}",
   "topRow": 13,
   "type": "SELECT_WIDGET",
   "version": 1,

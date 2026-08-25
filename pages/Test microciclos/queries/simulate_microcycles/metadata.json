@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{{JSON.stringify({\n  id_alumno: Number(sel_test_student.selectedOptionValue),\n  id_mesociclo: Number(sel_test_microcycle.selectedOptionValue),\n  fecha_proceso: moment().format('YYYY-MM-DD'),\n  forzar_recalculo: true,\n  dry_run: false\n})}}\n",
+      "body": "{{JSON.stringify({\n  id_alumno: Number(sel_test_student.selectedOptionValue),\n  id_mesociclo: Number(sel_test_microcycle.selectedOptionValue),\n  fecha_proceso: moment((sel_test_microcycle.selectedOptionData || (get_microcycle_options.data || []).find((row) => Number(row.value) === Number(sel_test_microcycle.selectedOptionValue)) || {}).fecha_inicio).add(Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1) - 1, 'weeks').format('YYYY-MM-DD'),\n  forzar_recalculo: true,\n  dry_run: false\n})}}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

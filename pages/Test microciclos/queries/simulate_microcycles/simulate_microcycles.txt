@@ -1,7 +1,7 @@
 {{JSON.stringify({
   id_alumno: Number(sel_test_student.selectedOptionValue),
   id_mesociclo: Number(sel_test_microcycle.selectedOptionValue),
-  fecha_proceso: moment().format('YYYY-MM-DD'),
+  fecha_proceso: moment((sel_test_microcycle.selectedOptionData || (get_microcycle_options.data || []).find((row) => Number(row.value) === Number(sel_test_microcycle.selectedOptionValue)) || {}).fecha_inicio).add(Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1) - 1, 'weeks').format('YYYY-MM-DD'),
   forzar_recalculo: true,
   dry_run: false
 })}}

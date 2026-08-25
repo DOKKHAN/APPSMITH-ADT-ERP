@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 26,
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "k_txt_test_microcycle_debug",
+  "leftColumn": 22,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "{{(() => { if (!sel_test_microcycle.selectedOptionValue || sel_test_microcycle.selectedOptionValue === '__empty__') return 'Selecciona un mesociclo para calcular la fecha simulada.'; const week = Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1); const selectedMeso = sel_test_microcycle.selectedOptionData || (get_microcycle_options.data || []).find((row) => Number(row.value) === Number(sel_test_microcycle.selectedOptionValue)) || {}; const processDate = selectedMeso.fecha_inicio ? moment(selectedMeso.fecha_inicio).add(week - 1, 'weeks').format('YYYY-MM-DD') : 'Sin fecha_inicio'; const transition = week >= 6 ? 'semana 6 -> sin semana 7' : `semana ${week} -> ${week + 1}`; return `Semana seleccionada: ${week} | Fecha proceso simulada: ${processDate} | Transición esperada: ${transition}`; })()}}",
+  "textAlign": "LEFT",
+  "textColor": "{{Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1) >= 6 ? '#FBBF24' : '#CBD5E1'}}",
+  "topRow": 21,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "w_txt_test_microcycle_debug",
+  "widgetName": "txt_test_microcycle_debug"
+}

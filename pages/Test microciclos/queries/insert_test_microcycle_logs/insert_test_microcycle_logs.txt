@@ -8,6 +8,13 @@ WITH input_rows AS (
     rir_objetivo_max int
   )
   WHERE x.reps_promedio IS NOT NULL
+), fecha_simulada AS (
+  SELECT
+    m.fecha_inicio::date
+      + (({{Number(sel_test_week.selectedOptionValue || appsmith.store.test_microcycle_selected_week || 1)}}::int - 1) * INTERVAL '7 days')
+      + INTERVAL '12 hours' AS fecha_realizada
+  FROM adt.mesociclos m
+  WHERE m.id_mesociclo = {{Number(sel_test_microcycle.selectedOptionValue) || 0}}
 ), limpiar AS (
   DELETE FROM adt.log_entrenamiento l
   USING input_rows i
@@ -32,9 +39,9 @@ INSERT INTO adt.log_entrenamiento (
 SELECT
   i.id_bloque,
   i.semana_meso,
-  CURRENT_TIMESTAMP,
-  EXTRACT(ISOYEAR FROM CURRENT_DATE)::integer,
-  EXTRACT(WEEK FROM CURRENT_DATE)::integer,
+  f.fecha_realizada,
+  EXTRACT(ISOYEAR FROM f.fecha_realizada)::integer,
+  EXTRACT(WEEK FROM f.fecha_realizada)::integer,
   i.series,
   0,
   i.reps_promedio,
@@ -43,4 +50,5 @@ SELECT
   7,
   'Prueba Appsmith microciclo'
 FROM input_rows i
+CROSS JOIN fecha_simulada f
 RETURNING id_log, id_bloque, semana_del_meso, reps_promedio;
