@@ -5,7 +5,7 @@ WITH input_rows AS (
     semana_meso int,
     series int,
     reps_promedio numeric,
-    peso_utilizado numeric,
+    peso_realizado numeric,
     rir_objetivo_max int
   )
   WHERE x.reps_promedio IS NOT NULL
@@ -44,7 +44,7 @@ SELECT
   EXTRACT(ISOYEAR FROM f.fecha_realizada)::integer,
   EXTRACT(WEEK FROM f.fecha_realizada)::integer,
   i.series,
-  COALESCE(i.peso_utilizado, 0),
+  COALESCE(i.peso_realizado, 0),
   i.reps_promedio,
   i.reps_promedio,
   i.rir_objetivo_max,

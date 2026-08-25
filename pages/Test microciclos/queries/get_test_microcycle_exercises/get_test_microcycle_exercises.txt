@@ -6,7 +6,7 @@ SELECT
   b.orden,
   e.nombre AS ejercicio,
   NULL::numeric AS reps_promedio,
-  NULL::numeric AS peso_utilizado,
+  NULL::numeric AS peso_realizado,
   CONCAT(b.reps_min, ' - ', b.reps_max) AS repeticiones,
   b.series,
   b.rir_objetivo_min,
