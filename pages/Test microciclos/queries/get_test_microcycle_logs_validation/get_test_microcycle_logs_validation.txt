@@ -1,0 +1,17 @@
+SELECT
+  l.id_log,
+  b.semana_meso,
+  b.dia_numero,
+  b.orden,
+  e.nombre,
+  l.fecha_realizada,
+  l.series_realizadas,
+  l.peso_utilizado,
+  l.reps_promedio,
+  l.rir_reportado,
+  l.comentario_alumno
+FROM adt.log_entrenamiento l
+JOIN adt.bloques_ejercicios b ON b.id_bloque = l.id_bloque
+JOIN adt.ejercicios e ON e.id_ejercicio = b.id_ejercicio
+WHERE b.id_mesociclo = {{Number(sel_test_microcycle.selectedOptionValue) || 0}}
+ORDER BY l.fecha_realizada DESC, b.semana_meso, b.dia_numero, b.orden;

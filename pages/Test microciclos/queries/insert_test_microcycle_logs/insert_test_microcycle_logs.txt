@@ -5,6 +5,7 @@ WITH input_rows AS (
     semana_meso int,
     series int,
     reps_promedio numeric,
+    peso_utilizado numeric,
     rir_objetivo_max int
   )
   WHERE x.reps_promedio IS NOT NULL
@@ -43,7 +44,7 @@ SELECT
   EXTRACT(ISOYEAR FROM f.fecha_realizada)::integer,
   EXTRACT(WEEK FROM f.fecha_realizada)::integer,
   i.series,
-  0,
+  COALESCE(i.peso_utilizado, 0),
   i.reps_promedio,
   i.reps_promedio,
   i.rir_objetivo_max,
@@ -51,4 +52,4 @@ SELECT
   'Prueba Appsmith microciclo'
 FROM input_rows i
 CROSS JOIN fecha_simulada f
-RETURNING id_log, id_bloque, semana_del_meso, reps_promedio;
+RETURNING id_log, id_bloque, semana_del_meso, peso_utilizado, reps_promedio;
