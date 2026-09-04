@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE adt.alumnos\nSET\n    nombre_completo = {{tbl_alumnos.updatedRow.nombre_completo}},\n    rut = {{tbl_alumnos.updatedRow.rut}},\n    fecha_nacimiento = {{tbl_alumnos.updatedRow.fecha_nacimiento}},\n    genero = {{tbl_alumnos.updatedRow.genero}},\n    enfoque_especifico = {{tbl_alumnos.updatedRow.enfoque_especifico}},\n    frecuencia_semanal = {{tbl_alumnos.updatedRow.frecuencia_semanal}},\n    nivel_experiencia = {{tbl_alumnos.updatedRow.nivel_experiencia}},\n    estado_activo = {{tbl_alumnos.updatedRow.estado_activo}},\n    evaluacion_inicial = {{tbl_alumnos.updatedRow.evaluacion_inicial}}\nWHERE id_alumno = {{tbl_alumnos.updatedRow.id_alumno}};",
+      "body": "UPDATE adt.alumnos\r\nSET\r\n    nombre_completo = {{tbl_alumnos.updatedRow.nombre_completo}},\r\n    rut = {{tbl_alumnos.updatedRow.rut}},\r\n    fecha_nacimiento = {{tbl_alumnos.updatedRow.fecha_nacimiento}},\r\n    genero = {{tbl_alumnos.updatedRow.genero}},\r\n    enfoque_especifico = {{tbl_alumnos.updatedRow.enfoque_especifico}},\r\n    frecuencia_semanal = {{tbl_alumnos.updatedRow.frecuencia_semanal}},\r\n    nivel_experiencia = CASE\n        WHEN {{tbl_alumnos.updatedRow.nivel_experiencia}} IN ('P1', 'P2', 'I1', 'I2') THEN {{tbl_alumnos.updatedRow.nivel_experiencia}}\n        ELSE nivel_experiencia\n    END,\n    estado_activo = {{tbl_alumnos.updatedRow.estado_activo}},\r\n    evaluacion_inicial = {{tbl_alumnos.updatedRow.evaluacion_inicial}}\r\nWHERE id_alumno = {{tbl_alumnos.updatedRow.id_alumno}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

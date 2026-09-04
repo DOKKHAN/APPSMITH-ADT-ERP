@@ -86,7 +86,7 @@ export default {
       !!sel_eval_enfoque_especifico.selectedOptionValue &&
       !!sel_eval_debilidad.selectedOptionValue &&
       !!inp_eval_frecuencia.selectedOptionValue &&
-      !!sel_eval_nivel.selectedOptionValue &&
+      this.isAllowedExperienceLevel(sel_eval_nivel.selectedOptionValue) &&
       this.validEvaluationRows().length > 0 &&
       this.validEvaluationRows().length === this.rawEvaluationRows().length;
   },
@@ -126,6 +126,14 @@ export default {
     return ['__none__', 'ninguno', 'ninguna', '', null, undefined].includes(value) ? null : value;
   },
 
+  allowedExperienceLevels() {
+    return ['P1', 'P2', 'I1', 'I2'];
+  },
+
+  isAllowedExperienceLevel(value) {
+    return this.allowedExperienceLevels().includes(String(value || '').trim());
+  },
+
   frecuenciaSemanal() {
     return String(inp_eval_frecuencia.selectedOptionValue || '');
   },
@@ -162,7 +170,7 @@ export default {
 
   async saveEvaluation() {
     if (!this.canSaveEvaluation()) {
-      showAlert('Completa alumno, objetivo, prioridad, enfoque principal, enfoque específico, debilidad, frecuencia, nivel y al menos un ejercicio con peso/reps/RPE/técnica.', 'warning');
+      showAlert('Completa alumno, objetivo, prioridad, enfoque principal, enfoque específico, debilidad, frecuencia, nivel válido (P1, P2, I1 o I2) y al menos un ejercicio con peso/reps/RPE/técnica.', 'warning');
       return;
     }
     try {

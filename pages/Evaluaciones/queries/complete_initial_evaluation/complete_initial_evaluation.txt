@@ -6,7 +6,7 @@ SET
   enfoque_especifico = {{HomeV2.noneToNull(sel_eval_enfoque_especifico.selectedOptionValue)}},
   debilidad = {{HomeV2.noneToNull(sel_eval_debilidad.selectedOptionValue)}},
   frecuencia_semanal = {{Number(inp_eval_frecuencia.selectedOptionValue) || null}},
-  nivel_experiencia = {{sel_eval_nivel.selectedOptionValue}},
+  nivel_experiencia = {{HomeV2.isAllowedExperienceLevel(sel_eval_nivel.selectedOptionValue) ? sel_eval_nivel.selectedOptionValue : null}},
   observaciones = {{inp_eval_observaciones.text || null}},
   evaluacion_inicial = TRUE
 WHERE id_alumno = {{sel_eval_student.selectedOptionValue}}

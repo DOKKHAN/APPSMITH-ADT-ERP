@@ -6,7 +6,10 @@ SET
     genero = {{tbl_alumnos.updatedRow.genero}},
     enfoque_especifico = {{tbl_alumnos.updatedRow.enfoque_especifico}},
     frecuencia_semanal = {{tbl_alumnos.updatedRow.frecuencia_semanal}},
-    nivel_experiencia = {{tbl_alumnos.updatedRow.nivel_experiencia}},
+    nivel_experiencia = CASE
+        WHEN {{tbl_alumnos.updatedRow.nivel_experiencia}} IN ('P1', 'P2', 'I1', 'I2') THEN {{tbl_alumnos.updatedRow.nivel_experiencia}}
+        ELSE nivel_experiencia
+    END,
     estado_activo = {{tbl_alumnos.updatedRow.estado_activo}},
     evaluacion_inicial = {{tbl_alumnos.updatedRow.evaluacion_inicial}}
 WHERE id_alumno = {{tbl_alumnos.updatedRow.id_alumno}};

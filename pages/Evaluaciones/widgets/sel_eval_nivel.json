@@ -42,7 +42,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 54,
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"label\": \"P1\", \"value\": \"P1\" },\n  { \"label\": \"P2\", \"value\": \"P2\" },\n  { \"label\": \"P3\", \"value\": \"P3\" },\n  { \"label\": \"I1\", \"value\": \"I1\" }\n]",
+  "sourceData": "[\n  { \"label\": \"P1\", \"value\": \"P1\" },\n  { \"label\": \"P2\", \"value\": \"P2\" },\n  { \"label\": \"I1\", \"value\": \"I1\" },\n  { \"label\": \"I2\", \"value\": \"I2\" }\n]",
   "topRow": 29,
   "type": "SELECT_WIDGET",
   "version": 1,
